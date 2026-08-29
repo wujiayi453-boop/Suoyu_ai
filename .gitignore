@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# crawler data
+*.json
+*.jsonl
+
+# raw crawl data
+crawler/**/qbitai_history_raw.jsonl
+crawler/**/*_raw.jsonl
