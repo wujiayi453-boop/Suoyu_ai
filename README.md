@@ -1,18 +1,49 @@
-# 索yu · AI 数据搜索平台
+# 索yu
 
-## 从 GitHub 下载完整项目
+找机会，读新知。岗位、公司、论文、模型与资讯，在这里一起探索。
 
-原始数据通过 Git LFS 保存，请先安装 Git LFS，然后运行：
+## Windows 用户：下载一次，以后双击打开
 
-```bash
-git lfs install
-git clone https://github.com/wujiayi453-boop/Suoyu_ai.git
-cd Suoyu_ai
-git lfs pull
-npm start
-```
+不需要 VS Code，不需要输入命令，也不用安装数据库。
 
-使用 Node.js 18 或更高版本。打开 http://127.0.0.1:4173/ 。运行服务无需安装第三方依赖；浏览器验证脚本另需 puppeteer-core 和 Chrome。不要仅下载不含 LFS 数据的源码压缩包，否则全文详情无法正常读取。
+### 第一次使用（只做一次）
+
+1. 安装 [Node.js](https://nodejs.org/)：选择 **LTS** 版本，安装时保持默认选项。已经安装 18 或更高版本可跳过。
+2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。本仓库为私有仓库，登录账号需要有访问权限。
+3. 在本仓库网页点击绿色 **Code → Open with GitHub Desktop**，选择保存位置，再点 **Clone**。也可在 Desktop 中点 **File → Clone repository → URL**，填写 `https://github.com/wujiayi453-boop/Suoyu_ai`。
+4. 等待下载结束。完整数据约 **1.3 GB**，请预留至少 **4 GB** 磁盘空间。
+5. 在 Desktop 中点 **Repository → Show in Explorer**，找到并双击 **启动.bat**（隐藏扩展名时显示为“启动”）。
+
+网页会在服务准备好后自动打开。**请保留启动窗口；关闭窗口即可停止网站。** 不要双击 public/index.html，也不要移动 database 文件夹。
+
+### 以后怎么打开？
+
+直接双击文件夹里的 **启动.bat** 即可，不用每次打开 GitHub Desktop。可以右键启动文件，创建快捷方式放在桌面；不要把启动文件本身移出去。
+
+### 怎么更新？
+
+先关闭启动窗口。在 GitHub Desktop 中选择此仓库，点 **Fetch origin**，有更新时再点 **Pull origin**。下载完成后重新双击启动。
+
+### 打不开时
+
+| 看到的情况 | 怎么处理 |
+| --- | --- |
+| 打开了 Node.js 官网 | 安装 LTS 版本，安装结束后重新双击启动 |
+| 提示数据未下载完整 | 保持联网；启动器会尝试下载。若提示找不到 Git，请安装 Git for Windows（含 Git LFS），再重试 |
+| 提示没有权限或找不到仓库 | 确认 GitHub Desktop 登录的是获授权账号；联系仓库所有者添加访问权限 |
+| 网页没有自动弹出 | 复制启动窗口里显示的网址到浏览器，端口每次可能不同 |
+| 下载的是 ZIP，提示数据缺失 | 改用上面的 GitHub Desktop 下载方式；源码 ZIP 可能只有大文件占位符 |
+| 关闭窗口后网页无法访问 | 再次双击启动；这是本地运行的网站 |
+
+启动器不会自动安装软件或修改系统设置。数据齐全后无需联网下载即可启动；外部图片和来源链接仍需要网络。
+
+[GitHub Desktop 官方下载说明](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+
+---
+
+## 开发与维护
+
+以下内容面向需要修改代码的人；普通使用者无需操作。
 # AI 数据搜索台（离线完整包）
 
 岗位 / 公司 / 论文 / 模型 / 资讯五类内容的本地检索台。零第三方依赖，只用 Node 内置模块。
