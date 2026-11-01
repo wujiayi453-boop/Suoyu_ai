@@ -1,0 +1,133 @@
+{
+  "checkedAt": "2026-11-01T01:43:09.594Z",
+  "totals": {
+    "news": {
+      "total": 8800,
+      "readable": 8784,
+      "summaryOnly": 16,
+      "errors": 0
+    },
+    "paper": {
+      "total": 5090,
+      "readable": 5090,
+      "summaryOnly": 0,
+      "errors": 0
+    },
+    "company": {
+      "total": 237,
+      "readable": 237,
+      "summaryOnly": 0,
+      "errors": 0
+    },
+    "job": {
+      "total": 6017,
+      "readable": 6017,
+      "summaryOnly": 0,
+      "errors": 0
+    },
+    "model": {
+      "total": 2000,
+      "readable": 2000,
+      "summaryOnly": 0,
+      "errors": 0
+    }
+  },
+  "issues": [
+    {
+      "type": "news",
+      "id": "d5fb06946e2870f032bbe6b6",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "95b1175401efbf048a538d56",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "37c19abff869a996e8268d08",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "8a355947a007573a54fd4e42",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "76629a49af7deed255bd9073",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "66f335b37956ff1f6ecddcca",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "d3e00dffb6d1de3f1458be1a",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "14286e07b382c22a19cd8d60",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "955d3df5d19d57c7f8c9dfb3",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "f5668aebb68e60ce6cf3b48a",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "53eb7b2a269b98b293465c68",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "b5699c477364cb0a1831a7f0",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "41f31e8c86dede4ad3ddafe0",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "2eefcf56cea12c9d51e1ddb0",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "99fe4999f51aa58597f59ce9",
+      "reason": "No saved body",
+      "summary": false
+    },
+    {
+      "type": "news",
+      "id": "93829b6e57932be714a135b0",
+      "reason": "No saved body",
+      "summary": false
+    }
+  ]
+}

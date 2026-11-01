@@ -1,0 +1,29 @@
+/* 专题色只服务于重点与交互；内容区保持克制的黑白灰。 */
+.theme-job{--topic:#07877b;--topic-soft:#e7f7f4;--topic-line:#bce8e2}
+.theme-company{--topic:#2871d5;--topic-soft:#edf4ff;--topic-line:#cfe1ff}
+.theme-paper{--topic:#7757c7;--topic-soft:#f3efff;--topic-line:#ddd1ff}
+.theme-model{--topic:#b56a08;--topic-soft:#fff5e4;--topic-line:#f2d6a4}
+.theme-news{--topic:#c95d33;--topic-soft:#fff0eb;--topic-line:#f4cdbd}
+
+.listing-page .page-head h1,.listing-page .listing-hero h1{color:#191b1f}
+.listing-page .page-head:before{background:var(--topic)}
+.listing-page .page-total{border-color:var(--topic-line);background:var(--topic-soft);color:var(--topic)}
+.listing-page .listing-hero-icon{border-color:var(--topic-line);background:var(--topic-soft);color:var(--topic)}
+.listing-page .search-form input:focus,.listing-page select:focus{border-color:var(--topic);box-shadow:0 0 0 3px color-mix(in srgb,var(--topic) 12%,transparent)}
+.listing-page .search-form button,.listing-page .filter-title button:hover{background:var(--topic)}
+.listing-page .filter-title button:hover{border-color:var(--topic)}
+.listing-page .result-list .kind,.listing-page .result-list .tag{background:var(--topic-soft);color:var(--topic)}
+.listing-page .result-list h3 a:hover,.listing-page .news-card h3 a:hover{color:var(--topic)}
+.listing-page .listing-filters{border-top-color:var(--topic-line)}
+.theme-model .search-form button{background:#1d1d1f}
+.theme-model .search-form button:hover{background:#353539}
+.theme-model .result-list .tag{border:1px solid #e2e3e6;background:#fff;color:#697078}
+.page-head-title{display:flex;align-items:center;gap:12px}.page-head-title .listing-hero-icon{display:grid;flex:0 0 40px;width:40px;height:40px;place-items:center;margin:0;border-radius:12px}.page-head-title .listing-hero-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.page-head-title h1{margin:0}
+.result-toolbar{align-items:center!important}.result-toolbar>div{display:flex;align-items:center;gap:14px}.index-mode{color:#8a9095;font-size:12px}.result-sort{display:flex;align-items:center;gap:7px;color:#6d7379;font-size:12px}.result-sort select{height:34px;padding:0 28px 0 10px;border:1px solid #dfe3e5;border-radius:8px;background:#fff;color:#25282c;font:inherit;cursor:pointer}.result-sort select:focus{outline:0;border-color:var(--topic);box-shadow:0 0 0 3px color-mix(in srgb,var(--topic) 12%,transparent)}
+
+/* 无封面卡片也保留方形占位（来源首字色块），不再退回单列。 */
+.listing-results .news-card article.no-cover .news-card-copy{max-width:none}
+@media(max-width:700px){.result-toolbar{align-items:flex-start!important;gap:12px}.result-toolbar>div{width:100%;justify-content:space-between}.result-sort select{height:32px}}
+
+/* 排序控件在所有内容列表页使用中性灰交互态，不改变主题色。 */
+.result-sort select:hover,.result-sort select:focus,.result-sort select:active{border-color:#cfd1d5!important;background:#f2f2f2!important;color:#25282c}.result-sort select option:checked{background:#ededed;color:#25282c}

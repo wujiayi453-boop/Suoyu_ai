@@ -1,0 +1,251 @@
+{
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "abstract": {
+        "type": "text",
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "authors": {
+        "properties": {
+          "affiliation": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      "categories": {
+        "type": "keyword"
+      },
+      "created_date": {
+        "type": "date"
+      },
+      "description": {
+        "type": "text",
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "external_ids": {
+        "type": "object",
+        "enabled": false
+      },
+      "extra": {
+        "properties": {
+          "abstract_word_count": {
+            "type": "integer"
+          },
+          "ai_datasets": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "ai_keywords": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "ai_methods": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "ai_subfield": {
+            "type": "keyword"
+          },
+          "all_categories": {
+            "type": "keyword"
+          },
+          "authors_count": {
+            "type": "integer"
+          },
+          "code_links": {
+            "type": "object",
+            "enabled": false
+          },
+          "comment": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "doi": {
+            "type": "keyword"
+          },
+          "figures_count": {
+            "type": "integer"
+          },
+          "full_text": {
+            "type": "text",
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "has_code": {
+            "type": "boolean"
+          },
+          "has_dataset": {
+            "type": "boolean"
+          },
+          "has_full_text": {
+            "type": "boolean"
+          },
+          "is_ai_related": {
+            "type": "boolean"
+          },
+          "is_open_access": {
+            "type": "boolean"
+          },
+          "journal_ref": {
+            "type": "text",
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "primary_category": {
+            "type": "keyword"
+          },
+          "reference_list_count": {
+            "type": "integer"
+          },
+          "references": {
+            "type": "text",
+            "index": false
+          },
+          "tables_count": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "integer"
+          }
+        }
+      },
+      "html_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "language": {
+        "type": "keyword"
+      },
+      "license": {
+        "type": "keyword"
+      },
+      "pdf_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "published_date": {
+        "type": "date"
+      },
+      "search_all": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "source_id": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        },
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 512
+          }
+        },
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "updated_date": {
+        "type": "date"
+      },
+      "url": {
+        "type": "keyword",
+        "index": false
+      }
+    }
+  }
+}

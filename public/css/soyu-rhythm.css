@@ -1,0 +1,90 @@
+/* Canonical type and rhythm roles. Keeps the established Soyu brand. */
+:root{
+ --font-interface:"Microsoft YaHei UI","PingFang SC","Microsoft YaHei",sans-serif;
+ --text-caption:13px;--text-body:16px;--text-card:18px;--text-section:28px;
+ --space-small:8px;--space-control:12px;--space-item:16px;--space-group:24px;--space-panel:32px;--space-section:64px;
+ --ease-flow:cubic-bezier(.16,1,.3,1);--motion-feedback:180ms;--motion-flow:380ms;
+}
+body{font-family:var(--font-interface);font-size:var(--text-body);line-height:1.75}
+button,input,select,textarea{font-family:inherit}
+.toast{pointer-events:none}
+h1,h2,h3,h4{font-family:var(--font-interface);text-wrap:balance}
+p{ text-wrap:pretty }
+.topbar .main-nav a,.topbar .fav-button{font-size:14px}
+.topbar .head-search input{font-size:var(--text-caption)}
+.soyu-hero .applied-hero-copy h1{font-family:var(--font-interface);font-size:clamp(42px,4.2vw,60px);line-height:1.28;font-weight:700;letter-spacing:-.03em}
+.soyu-hero .applied-hero-copy>p{font-size:var(--text-body);line-height:1.8;margin-top:var(--space-group)}
+.soyu-hero .large-search{margin-top:var(--space-panel)}
+.soyu-hero .large-search input,.soyu-hero .large-search button{font-size:14px}
+.soyu-inspiration,.soyu-shuffle,.soyu-ring-label span,.soyu-stat-rows a,.soyu-stat-rows small,.soyu-stat-note,.snapshot-note{font-size:var(--text-caption);line-height:1.65}
+.soyu-stats h2{font-size:var(--text-body);line-height:1.5;font-weight:600}
+.soyu-stat-rows a{padding-block:10px}.soyu-stat-note{margin-top:var(--space-item)}
+.applied-section>header h2{font-size:var(--text-section);line-height:1.4;font-weight:700;letter-spacing:-.02em}
+.applied-section>header span{font-size:14px;line-height:1.8;margin-top:var(--space-small)}
+.applied-section>header a,.research-links a{font-size:var(--text-caption);line-height:1.6;min-height:44px;display:inline-flex;align-items:center}
+.applied-section .applied-job h3,.applied-section .applied-job:first-child h3{font-size:var(--text-card);line-height:1.6;font-weight:600}
+.applied-job p,.applied-job strong,.applied-job>span{font-size:var(--text-caption);line-height:1.7}
+.applied-company h3{font-size:var(--text-body);line-height:1.5;font-weight:600}.applied-company p{font-size:var(--text-caption);line-height:1.6;margin-top:4px}
+.applied-jobs-grid,.applied-company-grid,.post-accordion,.applied-research-grid{margin-top:var(--space-group)}
+.applied-company-grid{gap:var(--space-item)}
+.applied-research-column h3{font-size:20px;line-height:1.5;font-weight:600}
+.applied-research-column a{font-size:var(--text-body);line-height:1.7;font-weight:500;min-height:80px}
+.post-info h3{font-size:24px;line-height:1.5;font-weight:600}.post-summary{font-size:var(--text-body);line-height:1.8}.post-source,.post-actions a,.post-actions button{font-size:var(--text-caption)}
+.post-actions{gap:var(--space-control);margin-top:var(--space-group)}
+.listing-page .result h3,.listing-page .result h3 a{font-size:var(--text-card);line-height:1.6;font-weight:600}
+.listing-page .result p{font-size:15px;line-height:1.8}
+.listing-page .listing-hero-unified h1{font-size:32px;line-height:1.4;letter-spacing:-.02em}
+.listing-page .listing-hero-unified p{font-size:14px;line-height:1.8}
+.page-head h1,.detail-hero h1,.np-head h1{font-size:clamp(26px,3vw,36px);line-height:1.5;letter-spacing:-.02em}
+.detail-main,.paper-reading,.np-body{font-family:var(--font-interface);font-size:var(--text-body);line-height:1.95}
+.np-body p,.paper-section p{margin-block:0 1.5em}
+.relation-card h3{font-size:var(--text-body);line-height:1.7}.relation-card small,.relation-card span{font-size:var(--text-caption);line-height:1.7}
+.applied-footer{margin-top:var(--space-section)}
+.applied-footer>div>span,.applied-footer nav a{font-size:var(--text-caption);line-height:1.8}
+.soyu-playground{background:#f5f0f8}
+.soyu-stats,.applied-jobs-grid,.post-panel{box-shadow:0 4px 12px -6px rgb(37 16 71 / 7%)}
+.soyu-hero .large-search button,.topbar .head-search button{box-shadow:none}
+.soyu-stats,.applied-jobs-grid,.applied-company{border-color:#e4dfe8}
+.applied-company b{background:transparent}
+/* The reading rail remains in normal flow and follows native scroll. */
+.home-flow-nav{position:sticky;top:var(--flow-top,68px);z-index:12;background:#faf8f4;padding:12px 0 10px;margin:28px 0 0;isolation:isolate;--flow-accent:#315b4b}
+.home-flow-links{display:flex;position:relative;gap:8px;width:max-content;max-width:100%;margin:auto}
+.home-flow-links button{position:relative;z-index:1;border:0;background:transparent;color:#6b6072;font-size:14px;font-weight:500;padding:10px 24px;min-height:44px;border-radius:8px;cursor:pointer;transition:color var(--motion-feedback)}
+.home-flow-links button[aria-current]{color:var(--flow-accent)}
+.home-flow-links button:hover{color:#251047}
+.home-flow-marker{position:absolute;left:0;top:0;bottom:0;border-radius:8px;background:color-mix(in srgb,var(--flow-accent) 10%,#faf8f4);transition:transform var(--motion-flow) var(--ease-flow),width var(--motion-flow) var(--ease-flow),background var(--motion-flow);pointer-events:none}
+.home-flow-progress{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--flow-accent);transform:scaleX(var(--flow-progress,0));transform-origin:left;pointer-events:none}
+.home-chapter.applied-section,.home-chapter.applied-research{position:relative;padding:var(--space-section) 0 0!important;margin:0;border-top:0}
+.home-chapter::before{content:"";position:absolute;top:12px;left:24px;width:2px;height:40px;background:var(--section-line,#ded2e8)}
+.home-chapter::after{content:"";position:absolute;top:12px;left:24px;width:2px;height:40px;background:var(--section-ink,#70518e);transform:scaleY(var(--chapter-link,0));transform-origin:top}
+.home-chapter>header{position:relative;overflow:hidden}
+.home-chapter[data-topic]>header{background-image:none;min-height:128px;padding:var(--space-group) var(--space-panel)}
+.home-chapter[data-topic]>header::before{content:"";position:absolute;inset:-16px 64px -16px 48%;background:var(--section-art) no-repeat right center / 270px auto;transform:translateY(var(--chapter-drift,0px));z-index:-1;pointer-events:none}
+.home-chapter.applied-research>header{min-height:112px;display:flex;align-items:center;padding:0 0 0 24px}
+.home-chapter.is-current>header h2{color:var(--section-ink,#70518e)}
+.home-chapter :is(a,button){scroll-margin-top:180px}
+.home-chapter>header h2:focus-visible{outline-offset:8px}
+.post-actions a:active,.post-actions button:active,.soyu-shuffle:active{transform:translateY(1px)}
+@media(max-width:900px){.home-flow-links button{padding-inline:22px}.applied-company h3{font-size:15px}.applied-section>header h2{font-size:26px}}
+@media(max-width:700px){
+ :root{--text-section:24px;--space-section:44px;--space-panel:20px}
+ .soyu-hero .applied-hero-copy h1{font-size:42px}.soyu-hero .applied-hero-copy>p{font-size:15px;margin-top:20px}
+ .soyu-hero .large-search{margin-top:24px}.soyu-inspiration{gap:8px}.soyu-topics a,.soyu-shuffle{font-size:12px}
+ .soyu-stats{padding:20px}.soyu-ring{margin-block:16px 12px}
+ .home-flow-nav{margin-top:20px;padding:8px 0}.home-flow-links{width:100%;gap:0}.home-flow-links button{flex:1;min-width:0;padding:10px 8px;font-size:13px;white-space:nowrap}
+ .home-chapter::before,.home-chapter::after{top:8px;left:20px;height:28px}
+ .home-chapter[data-topic]>header{padding:20px 16px;gap:8px;min-height:124px}
+ .home-chapter[data-topic]>header::before{right:24px;left:35%;background-size:185px auto}
+ .home-chapter>header h2{font-size:24px}.home-chapter>header span{font-size:13px;max-width:21ch}.home-chapter>header a{font-size:12px}
+ .applied-jobs-grid,.applied-company-grid,.post-accordion,.applied-research-grid{margin-top:20px}
+ .applied-company-grid{gap:12px}.applied-company{grid-template-columns:32px 1fr;padding:16px 12px;column-gap:10px}.applied-company h3{font-size:14px}.applied-company p{font-size:12px}
+ .applied-section .applied-job h3,.applied-section .applied-job:first-child h3{font-size:17px}.applied-job p,.applied-job strong{font-size:13px}
+ .post-info h3{font-size:22px;line-height:1.5}.post-summary{font-size:15px}.post-info{padding:20px}
+ .applied-research-column a{font-size:15px}.home-chapter.applied-research>header{min-height:100px;padding-left:20px}
+ .listing-page .listing-hero-unified h1{font-size:28px}.listing-page .result h3,.listing-page .result h3 a{font-size:17px}
+ .detail-main,.paper-reading,.np-body{font-size:16px;line-height:1.9}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-flow-marker{transition:none}.home-chapter[data-topic]>header::before{transform:none}
+ .post-actions a:active,.post-actions button:active,.soyu-shuffle:active{transform:none}
+}

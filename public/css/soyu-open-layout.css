@@ -1,0 +1,62 @@
+/* Open chapter transitions and a quiet side index. */
+body:has(.soyu-hero) .layout main{max-width:1280px!important;padding-left:104px!important;padding-right:40px!important}
+.home-flow-nav{position:fixed;left:max(16px,calc((100vw - 1440px)/2 + 16px));top:50%;transform:translateY(-50%);width:72px;margin:0;padding:0;background:transparent;z-index:15}
+.home-flow-links{display:flex;flex-direction:column;gap:8px;width:100%;margin:0}
+.home-flow-links button{flex:none;width:100%;min-height:44px;padding:10px 8px;font-size:13px;border:0;background:transparent;border-radius:0;text-align:center}
+.home-flow-links button[aria-current]{font-weight:700}
+.home-flow-marker{inset:0 auto auto 0;border-radius:0;background:transparent;border-left:2px solid var(--flow-accent);transition:transform var(--motion-flow) var(--ease-flow),border-color var(--motion-flow)}
+.home-flow-progress{display:none}
+.home-chapter.applied-section{opacity:var(--chapter-opacity,1);transform:translateY(var(--chapter-offset,0px));border:0;background:transparent}
+.home-chapter:focus-within{opacity:1;transform:none}
+.home-chapter::before,.home-chapter::after{display:none}
+.home-chapter[data-topic]>header,.home-chapter.applied-research>header{border:0;border-radius:0;background:transparent;min-height:112px;padding:16px 0;overflow:visible}
+.home-chapter[data-topic]>header a{background:transparent;padding-right:0}
+.home-chapter[data-topic]>header::before{inset:-12px 80px -12px 48%;opacity:.75}
+.home-chapter .applied-jobs-grid{border:0;box-shadow:none;border-radius:0;background:transparent;padding:0;gap:0 40px}
+.home-chapter .applied-job{border-bottom:1px solid #e5dfe8;padding:24px 0}
+.home-chapter .applied-company{border:0;box-shadow:none;border-radius:0;background:transparent;padding:20px 8px}
+.home-chapter .applied-company:hover{background:var(--section-soft);border-color:transparent}
+.home-chapter .post-panel{border:0;box-shadow:none}
+.home-chapter .applied-research-column>header{border:0;border-radius:0;background-color:transparent;padding:20px 0!important}
+.home-chapter .applied-research-grid{border:0}
+/* The category's artwork belongs to the page, while reading stays on paper. */
+body:has(#main>.listing-page){background:var(--section-soft,#faf8f4)}
+body:has(#main>.listing-page)::before{content:"";position:fixed;inset:70px 0 0;pointer-events:none;background-image:var(--section-art,none);background-repeat:no-repeat;background-position:right -80px top 50px;background-size:580px auto;opacity:.55;z-index:-1}
+body:has(#main>.listing-page) .layout main{max-width:1280px;padding:40px 56px 72px!important;margin-inline:auto}
+#main>.listing-page{position:relative;padding:0 12px}
+#main>.listing-page .listing-hero.listing-hero-unified{border:0;background:transparent;padding:24px 12px!important;min-height:140px}
+#main>.listing-page .listing-results{padding:28px 32px;background:#fffdf9;border-radius:12px}
+#main>.listing-page .listing-results .result{padding:24px 16px}
+#main>.listing-page .listing-layout{gap:28px}
+#main>.listing-page .listing-filters{padding-inline:12px}
+#main>.listing-page .result-toolbar{padding-inline:16px}
+@media(max-width:1000px){
+ body:has(.soyu-hero) .layout main{padding-left:88px!important;padding-right:28px!important}
+ .home-flow-nav{left:12px;width:60px}
+ .applied-hero.soyu-hero{gap:24px;grid-template-columns:minmax(0,1fr) minmax(280px,.85fr)}
+ body:has(#main>.listing-page) .layout main{padding:32px 32px 60px!important}
+ #main>.listing-page{padding:0}
+ #main>.listing-page .listing-results{padding:24px}
+}
+@media(max-width:800px){.applied-hero.soyu-hero{grid-template-columns:1fr}.soyu-hero .applied-hero-copy{max-width:620px}.soyu-stats{width:100%;max-width:540px;justify-self:center}}
+@media(max-width:700px){
+ body:has(.soyu-hero) .layout main{padding-left:64px!important;padding-right:16px!important}
+ .home-flow-nav{left:8px;width:44px;top:52%}.home-flow-links{gap:6px}.home-flow-links button{font-size:12px;padding:10px 0}
+ .soyu-hero .applied-hero-copy{padding:0}.soyu-hero .applied-hero-copy h1{font-size:38px}.soyu-hero .large-search{padding:5px}.soyu-hero .large-search input{padding-inline:8px;font-size:13px}.soyu-hero .large-search button{padding-inline:12px;font-size:13px}
+ .soyu-stats{padding:18px 14px}.soyu-stats h2{font-size:15px}.soyu-stat-rows a{gap:8px;padding-inline:0}
+ .home-chapter[data-topic]>header,.home-chapter.applied-research>header{padding:16px 0;min-height:108px;align-items:flex-start;flex-wrap:wrap;gap:8px}
+ .home-chapter>header h2{font-size:23px}.home-chapter>header span{max-width:none}.home-chapter>header a{min-height:32px;padding:0;font-size:12px}
+ .home-chapter[data-topic]>header::before{left:35%;right:-8px;opacity:.5}
+ .home-chapter .applied-jobs-grid{padding:0}.home-chapter .applied-job{grid-template-columns:1fr}.home-chapter .applied-job h3,.home-chapter .applied-job>span{grid-column:auto}.home-chapter .applied-job strong{text-align:left;max-width:none}
+ .home-chapter .applied-company-grid{grid-template-columns:1fr}.home-chapter .applied-company{padding:12px 0;grid-template-columns:38px 1fr}
+ .home-chapter .post-info{padding:18px}.home-chapter .post-info h3{font-size:20px}.home-chapter .post-summary{font-size:14px}
+ .home-chapter .applied-research-column>header{min-height:94px;background-size:140px auto}
+ body:has(#main>.listing-page) .layout main{padding:24px 20px 48px!important}
+ body:has(#main>.listing-page)::before{background-size:340px auto;background-position:right -110px top 40px}
+ #main>.listing-page .listing-hero.listing-hero-unified{padding:20px 8px!important}
+ #main>.listing-page .listing-results{padding:20px 16px}
+ #main>.listing-page .listing-results .result{padding:20px 4px}
+ #main>.listing-page .result-toolbar{padding:0}
+ #main>.listing-page .listing-filters{padding-inline:4px}
+}
+@media(prefers-reduced-motion:reduce){.home-chapter.applied-section{opacity:1;transform:none}.home-flow-marker{transition:none}}

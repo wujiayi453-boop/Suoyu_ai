@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; padding: 30px; background: #f4f7f7; font-family: "Microsoft YaHei", sans-serif; }
+  .card { width: 1120px; padding: 26px 30px; background: #172326; border-radius: 14px; box-shadow: 0 10px 30px #b6c6c6; }
+  .label { color: #72d7d2; font-size: 22px; font-weight: 700; margin-bottom: 14px; }
+  pre { margin: 0; color: #e8f2f2; font: 18px/1.6 Consolas, "Courier New", monospace; white-space: pre-wrap; }
+  .kw { color: #8bd2ff; } .fn { color: #ffcf77; } .str { color: #a9d98e; } .cm { color: #94a5a5; }
+</style>
+<section class="card">
+  <div class="label">关键代码 1：Hash 路由解析与状态读取（public/js/app.js）</div>
+  <pre><span class="kw">function</span> <span class="fn">routeInfo</span>() {
+  <span class="kw">const</span> raw = location.hash.slice(1) || <span class="str">'/'</span>;
+  <span class="kw">const</span> [path, query = <span class="str">''</span>] = raw.split(<span class="str">'?'</span>);
+  <span class="kw">return</span> { path: path || <span class="str">'/'</span>, params: <span class="kw">new</span> URLSearchParams(query) };
+}
+
+<span class="cm">// 将关键词、筛选条件和分页状态写入 URL，支持刷新与前进/后退恢复。</span></pre>
+</section>

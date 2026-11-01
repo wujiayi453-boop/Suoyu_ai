@@ -1,0 +1,46 @@
+/* 全站自适应兜底：针对窗口缩放、平板和手机保留同一条浏览路径。 */
+html,body{max-width:100%;overflow-x:clip}
+img,svg,video,canvas{max-width:100%}
+input,select,textarea,button{max-width:100%}
+.layout main,.applied-section,.applied-section *, .listing-page,.listing-page *{min-width:0}
+
+@media(min-width:1280px){
+  body:has(.applied-hero) .layout main{max-width:1320px!important;padding-inline:24px!important}
+  .applied-hero{max-width:1280px;margin-inline:auto;grid-template-columns:minmax(0,500px) minmax(380px,430px);justify-content:space-between;gap:72px;padding:54px 64px}
+  .applied-hero-copy{max-width:500px}.applied-overview{justify-self:end}
+}
+
+@media(min-width:1600px){
+  body:has(.applied-hero) .layout main{max-width:1360px!important}
+  .applied-hero{max-width:1312px}
+}
+
+@media(max-width:1050px){
+  .top-inner{gap:12px!important;padding-inline:20px!important}.main-nav{min-width:0;overflow-x:auto;scrollbar-width:none}.main-nav::-webkit-scrollbar{display:none}.head-search{min-width:150px!important;max-width:260px}.layout main{padding-inline:20px!important}
+  .applied-hero{grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:34px;padding:44px 40px}.applied-hero-copy h1{font-size:clamp(42px,5vw,54px)}
+  .applied-company-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.applied-jobs-grid{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}.applied-job:first-child{grid-row:auto;grid-column:span 2;min-height:180px}
+  .detail-grid{grid-template-columns:minmax(0,1fr) 230px}.news-modal{width:min(94vw,1020px);padding-inline:clamp(28px,7vw,72px)}
+}
+
+/* 缩放后常见的中等宽度：内容高度由文字决定，不保留桌面卡片的空白。 */
+@media(min-width:701px) and (max-width:1100px){
+  .applied-section{padding-block:clamp(44px,6vw,58px)}.applied-section>header h2{font-size:clamp(30px,4.5vw,40px)}
+  .applied-jobs-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;height:auto;gap:14px}.applied-job,.applied-job:first-child{grid-column:auto;grid-row:auto;min-height:0;padding:18px}.applied-job:first-child{grid-column:span 2}.applied-job h3,.applied-job:first-child h3{font-size:clamp(16px,2.4vw,19px);-webkit-line-clamp:2}.applied-job p{-webkit-line-clamp:2}.applied-job strong{margin-top:10px}
+  .applied-company-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.applied-company{min-height:0;padding:20px 12px}.applied-news-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.applied-news-image{height:clamp(140px,20vw,176px)}
+  .listing-results .result{padding-block:18px}.listing-results .actions{flex-wrap:wrap}.detail-main p{overflow-wrap:anywhere}
+}
+
+@media(max-width:700px){
+  .topbar{position:sticky;top:0}.top-inner{min-height:58px;padding-inline:16px!important;gap:10px}.brand{font-size:15px}.brand>span:last-child>span{display:none}.main-nav{order:3;flex-basis:100%;justify-content:flex-start;padding-bottom:7px}.main-nav a{min-height:36px;padding:7px 9px;font-size:12px}.head-search{order:2;flex:1 1 170px;min-width:0!important;height:34px}.head-search button{padding-inline:10px}.fav-button{order:4;font-size:0}.fav-button .count{font-size:10px}
+  .layout main{padding:82px 16px 56px!important}.applied-hero{grid-template-columns:1fr;gap:26px;min-height:0;padding:38px 20px;border-radius:20px}.applied-hero-copy{text-align:center}.applied-hero-copy h1{margin-inline:auto;font-size:clamp(36px,10vw,46px)}.applied-hero-copy>p{margin-inline:auto}.applied-hero .large-search{margin-inline:auto;width:100%}.applied-overview{margin-inline:auto}
+  .search-stack{width:100%}.search-stack .search-row{flex-basis:100%}.search-tools{width:100%;min-width:0}.search-tools>select{flex:1;min-width:0}.listing-hero.listing-hero-unified{margin-block:18px}.listing-layout{display:block}.listing-filters{position:static}.listing-results .result{grid-template-columns:minmax(0,1fr);gap:12px}.listing-results .actions{justify-content:flex-start}.job-card article{padding-right:0!important}.job-card .job-salary{position:static!important;margin-left:auto}.job-title-line{align-items:flex-start}.result-toolbar,.result-toolbar>div{flex-wrap:wrap}.result-sort{margin-left:0}
+  .applied-company-grid,.applied-news-grid{grid-template-columns:1fr 1fr}.applied-news-image{height:150px}.applied-research-grid{grid-template-columns:1fr;gap:26px}.applied-research-column+.applied-research-column{border-left:0}.detail-grid{grid-template-columns:1fr}.detail-side{border-top:1px solid var(--line);border-left:0}.detail-main,.detail-side{padding:22px 18px}.detail-hero{padding:22px 18px}.detail-hero h1{font-size:clamp(25px,7vw,32px)}.news-modal{width:100%;min-height:100%;padding:72px 20px 36px;border-radius:0}.news-modal-close{right:16px;top:16px}
+}
+
+@media(max-width:430px){
+  .top-inner{padding-inline:12px!important}.logo{width:28px;height:28px}.main-nav a{padding-inline:8px}.applied-hero{padding-inline:16px}.applied-company-grid,.applied-news-grid{grid-template-columns:1fr}.applied-job:first-child{grid-column:auto}.applied-jobs-grid{grid-template-columns:1fr}.applied-news-image{height:180px}.listing-hero-unified .listing-hero-copy{grid-template-columns:42px minmax(0,1fr)!important}.listing-hero-unified .listing-hero-icon{width:42px;height:42px}.search-tools{gap:7px}.search-tools .advanced-search summary{padding-inline:12px}.pager{gap:5px}.pager-btn{min-width:34px;padding-inline:8px}
+}
+
+@media(pointer:coarse){
+  .main-nav a,.open,.star,.secondary,.cs-trigger,.cs-option{min-height:44px}.result-sort .cs-trigger{min-height:38px}.filter-row select,.search-tools>select{min-height:44px}
+}

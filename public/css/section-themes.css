@@ -1,0 +1,42 @@
+/* Five accents in the same Soyu world. Motifs are decorative, not data graphs. */
+body[data-section="jobs"],.theme-job,[data-topic="job"]{--section-ink:#315b4b;--section-soft:#eff5f0;--section-line:#c9dace;--section-art:url('../assets/topic-job.svg')}
+body[data-section="companies"],.theme-company,[data-topic="company"]{--section-ink:#3e587d;--section-soft:#eef3f9;--section-line:#ced9e8;--section-art:url('../assets/topic-company.svg')}
+body[data-section="knowledge"],.theme-paper,.research-paper{--section-ink:#70518e;--section-soft:#f3eff8;--section-line:#ded2e8;--section-art:url('../assets/topic-paper.svg')}
+body[data-section="models"],.theme-model,.research-model{--section-ink:#805c26;--section-soft:#faf3e7;--section-line:#e5d6ba;--section-art:url('../assets/topic-model.svg')}
+body[data-section="news"],.theme-news,[data-topic="news"]{--section-ink:#89515d;--section-soft:#faf0f1;--section-line:#e8d2d8;--section-art:url('../assets/topic-news.svg')}
+.theme-job,.theme-company,.theme-paper,.theme-model,.theme-news{--topic:var(--section-ink);--topic-soft:var(--section-soft);--topic-line:var(--section-line)}
+.applied-section[data-topic]>header{min-height:128px;padding:24px 28px;background-color:var(--section-soft);background-image:var(--section-art);background-repeat:no-repeat;background-size:270px auto;background-position:right 65px center;border-radius:16px;border:1px solid var(--section-line);isolation:isolate}
+.applied-section[data-topic]>header h2{color:var(--section-ink)}
+.applied-section[data-topic]>header a{color:var(--section-ink);text-decoration-color:var(--section-line);background:var(--section-soft);padding:8px 0 8px 12px}
+.applied-section[data-topic]>header span{color:#655e68;max-width:38ch}
+.applied-section[data-topic] .applied-job strong,.applied-section[data-topic] .applied-job:hover h3{color:var(--section-ink)}
+.applied-section[data-topic] .applied-company b{color:var(--section-ink);background:var(--section-soft)}
+.applied-section[data-topic] .applied-company:hover{border-color:var(--section-ink);background:var(--section-soft)}
+.applied-research-column>header{min-height:116px;padding:22px!important;display:flex;align-items:center;background-color:var(--section-soft);background-image:var(--section-art);background-repeat:no-repeat;background-size:190px auto;background-position:right center;border:1px solid var(--section-line);border-radius:14px;margin-bottom:8px}
+.applied-research-column h3{font-size:20px;color:var(--section-ink)}
+.applied-research-column a:hover{background:var(--section-soft);color:var(--section-ink)}
+.listing-page .listing-hero.listing-hero-unified{padding:28px 32px!important;min-height:152px;border:1px solid var(--section-line);border-radius:18px;background-color:var(--section-soft);background-image:var(--section-art);background-repeat:no-repeat;background-position:right center;background-size:330px auto;margin-bottom:28px}
+.listing-page .listing-hero-unified .listing-hero-copy{max-width:75%}
+.listing-page .listing-hero-unified h1{color:var(--section-ink)}
+.listing-page .listing-hero-icon{color:var(--section-ink);background:#fffdf9;border-color:var(--section-line)}
+.listing-page .search-form button,.listing-page .primary{background:var(--section-ink)}
+.listing-page .job-salary,.listing-page .job-company,.listing-page .company-arrow{color:var(--section-ink)}
+.listing-page .result-list .tag,.listing-page .result-list .kind{color:var(--section-ink);background:var(--section-soft);border-color:var(--section-line)}
+.listing-page .result:hover{border-color:var(--section-line)}
+body[data-section]:not([data-section="home"]):not([data-section="favorites"]) .main-nav a.active{background:var(--section-soft,#eee6f6);color:var(--section-ink,#180041)}
+body[data-section] .detail-hero,body[data-section] .np-head{background-color:var(--section-soft,#fffdf9);background-image:var(--section-art,none);background-position:right top;background-size:250px auto;background-repeat:no-repeat}
+body[data-section] .detail-hero h1,body[data-section] .np-head h1{color:var(--section-ink,#21192a)}
+body[data-section] .detail-side{background:var(--section-soft,#f3eef6)}
+body[data-section] .detail-actions .primary{background:var(--section-ink,#180041)}
+body[data-section] .np-cat{color:var(--section-ink,#180041)}
+body[data-section] .np-cat::before{background:var(--section-ink,#180041)}
+.soyu-ring-label strong{min-width:155px;text-align:center;font-variant-numeric:tabular-nums;line-height:1.25}
+.soyu-stats>header{min-height:34px}
+@media(max-width:700px){
+ .applied-section[data-topic]>header{min-height:124px;padding:20px 16px;background-size:185px auto;background-position:right 24px center;gap:10px}
+ .applied-section[data-topic]>header h2{font-size:23px}.applied-section[data-topic]>header span{max-width:20ch;font-size:12px}.applied-section[data-topic]>header a{font-size:12px;white-space:nowrap}
+ .listing-page .listing-hero.listing-hero-unified{padding:24px 18px!important;background-size:210px auto;background-position:right -60px center;min-height:140px}
+ .listing-page .listing-hero-unified .listing-hero-copy{max-width:100%}
+ .applied-research-column>header{min-height:100px;background-size:150px auto;padding:18px!important}
+ body[data-section] .detail-hero,body[data-section] .np-head{background-size:180px auto;background-position:right -65px top}
+}

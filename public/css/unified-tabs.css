@@ -1,0 +1,41 @@
+/* 统一检索页：资源类型切换条 —— 一次检索看清五类资源各命中多少条 */
+
+.type-switch{display:flex;flex-wrap:wrap;gap:8px;margin:11px 0 0}
+.type-tab{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 15px;border:1px solid #d3dfda;border-radius:999px;background:#fff;color:#4b5a55;font-size:13px;font-weight:650;line-height:1;white-space:nowrap;transition:border-color .16s,background .16s,color .16s,box-shadow .16s}
+.type-tab:hover{border-color:#9ec6ba;background:#f2f9f6;color:#17342e}
+.type-tab.is-active{border-color:#087b6e;background:#087b6e;color:#fff;box-shadow:0 6px 14px rgba(8,123,110,.18)}
+.type-tab.is-active:hover{background:#0a6d61;color:#fff}
+
+/* 计数徽标：未检索时是该类型的入库总量，检索后是该类型的命中条数 */
+.type-tab .tab-count{display:inline-grid;min-width:24px;height:20px;padding:0 7px;place-items:center;border-radius:10px;background:#e8f3ef;color:#0d695f;font-size:11px;font-weight:700;font-variant-numeric:tabular-nums}
+.type-tab.is-active .tab-count{background:rgba(255,255,255,.24);color:#fff}
+
+/* 命中为 0 的类型不隐藏，只是压暗，避免"看不见就没有"的误判 */
+.type-tab.is-empty{color:#8b9691}
+.type-tab.is-empty .tab-count{background:#f0f2f1;color:#98a29d}
+.type-tab.is-active.is-empty{color:#fff}
+.type-tab.is-active.is-empty .tab-count{background:rgba(255,255,255,.24);color:#fff}
+.type-tab .tab-count.is-loading{background:transparent;color:#a3adaa;letter-spacing:1px}
+
+.type-switch-note{margin:9px 0 0;color:#7b8883;font-size:11px}
+
+/* 选中某一类型后，统一检索页内直接复用分类页骨架（筛选器 + 排序 + 分页），
+   只补一点与类型切换条的间距。 */
+#globalResults>.listing-page{margin-top:14px}
+
+/* 分组视图（全部）：每类一个分块，结果卡片与分类页同款 */
+.search-cluster{margin:36px 0 0}
+.search-cluster .cluster-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid #e6e8ea}
+.search-cluster .cluster-head>div{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px;min-width:0}
+.search-cluster .cluster-head h2{margin:0;font-size:21px;font-weight:650;letter-spacing:-.01em}
+.search-cluster .cluster-head span{color:#7b8883;font-size:12px}
+.search-cluster .cluster-head a{color:#087b6e;font-size:12px;font-weight:650;white-space:nowrap}
+.search-cluster .cluster-head a:hover{text-decoration:underline}
+.search-cluster .listing-results{margin-top:10px}
+
+@media(max-width:690px){
+  .type-switch{gap:6px}
+  .type-tab{height:34px;padding:0 12px;font-size:12px}
+  .type-tab .tab-count{min-width:21px;height:18px;font-size:10px}
+  .result-toolbar{flex-wrap:wrap;gap:8px}
+}

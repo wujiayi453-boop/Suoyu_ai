@@ -1,0 +1,108 @@
+{
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "_record_index": {
+        "type": "integer"
+      },
+      "_source_file": {
+        "type": "keyword"
+      },
+      "_source_folder": {
+        "type": "keyword"
+      },
+      "ai_domains": {
+        "type": "keyword"
+      },
+      "category": {
+        "type": "keyword"
+      },
+      "companies": {
+        "type": "keyword"
+      },
+      "content": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "content_html": {
+        "type": "text",
+        "index": false
+      },
+      "crawled_at": {
+        "type": "date"
+      },
+      "dataset_source": {
+        "type": "keyword"
+      },
+      "http_status": {
+        "type": "integer"
+      },
+      "image_layout": {
+        "type": "object",
+        "enabled": false
+      },
+      "images": {
+        "type": "object",
+        "enabled": false
+      },
+      "keywords": {
+        "type": "keyword"
+      },
+      "metadata": {
+        "type": "object",
+        "enabled": false
+      },
+      "models": {
+        "type": "keyword"
+      },
+      "news_id": {
+        "type": "keyword"
+      },
+      "published_at": {
+        "type": "keyword"
+      },
+      "raw_html_file": {
+        "type": "keyword"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "source_name": {
+        "type": "keyword"
+      },
+      "source_site": {
+        "type": "keyword"
+      },
+      "source_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "summary": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "tags": {
+        "type": "keyword"
+      },
+      "technologies": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        },
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      }
+    }
+  }
+}

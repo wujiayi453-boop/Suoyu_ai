@@ -1,0 +1,131 @@
+/* ui-refine.css —— 收尾微调，最后加载。
+   只做三件事：分页器、搜索胶囊（按钮收进框内 + 范围/高级检索独立成行）、以及少量按压反馈。
+   配色沿用现有变量与灰底「已选中」语言，不改动既有风格。 */
+
+/* ---- 分页器 ---- */
+.pager{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:30px 0 6px}
+.pager-btn{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 11px;border:1px solid #dfe3e5;border-radius:9px;background:#fff;color:#4a4f54;font-size:13px;font-variant-numeric:tabular-nums;text-decoration:none;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+a.pager-btn:hover{border-color:#b8bfc4;background:#f6f7f6;color:#1d1d1f}
+.pager-btn.is-current{border-color:#c7cac5;background:#ececea;color:#1d1d1f;font-weight:600;cursor:default}
+.pager-btn.is-disabled{border-color:#eceef0;color:#c3c6c9;cursor:default}
+.pager-gap{padding:0 2px;color:#b3b7bb;font-size:13px}
+.pager-info{margin-left:10px;color:#9a9da2;font-size:12.5px;font-variant-numeric:tabular-nums}
+
+/* ---- 搜索：放大镜 + 输入框 + 按钮同处一个胶囊 ---- */
+.search-stack{display:flex;flex-direction:column;align-items:stretch;gap:11px}
+.search-stack .search-row{display:flex;flex:none;align-items:center;gap:10px;height:51px;margin:0;padding:0 7px 0 18px;border:1px solid #d6d7dc;border-radius:99px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.search-stack .search-row:focus-within{border-color:var(--topic,#087b6e);box-shadow:0 0 0 3px color-mix(in srgb,var(--topic,#087b6e) 12%,transparent)}
+.search-stack .search-row .glass{flex:none;color:#8a9095;font-size:19px;line-height:1}
+.search-stack .search-row input,
+.search-stack .search-row input:focus,
+.listing-page .search-form .search-row input:focus{flex:1;min-width:0;width:auto;height:100%;max-width:none;margin:0;padding:0;border:0;border-color:transparent;border-radius:0;background:transparent;outline:0;box-shadow:none;font-size:15px}
+.search-stack .search-row button{flex:none;height:37px;margin:0;padding:0 20px;border:0;border-radius:99px}
+
+/* 字段选择与高级检索紧随搜索框：桌面端保持同一条操作带。 */
+.search-stack{position:relative;flex-direction:row;flex-wrap:wrap;align-items:flex-start;gap:10px;margin-bottom:28px}
+.search-stack .search-row{flex:1 1 360px;min-width:0}
+.search-tools{display:flex;flex:0 0 auto;align-items:flex-start;gap:10px}
+.search-tools>select{height:51px;max-width:172px;padding:0 12px;border:1px solid #d6d7dc;border-radius:12px;background:#fff;color:#45534f;font-size:12.5px}
+.search-tools .advanced-search{position:relative;height:51px;box-sizing:border-box;min-width:auto;margin:0;border:1px solid #d6d7dc;border-radius:12px;background:#fff}
+.search-tools .advanced-search summary{display:flex;align-items:center;height:49px;padding:0 17px;list-style:none;color:#363a3e;font-size:12.5px;font-weight:600;white-space:nowrap;cursor:pointer}
+.search-tools .advanced-search summary::-webkit-details-marker{display:none}
+.search-tools .advanced-search summary:after{content:'⌄';margin-left:7px;color:#858b90;font-size:14px;transition:transform .15s}
+.search-tools .advanced-search[open]{z-index:10;border-color:var(--topic,#087f73);border-radius:12px}
+.search-tools .advanced-search[open] summary:after{transform:rotate(180deg)}
+.search-tools .advanced-search[open] .advanced-grid,.search-tools .advanced-search[open] .paper-advanced-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:10;width:min(540px,calc(100vw - 32px));padding:14px;border:1px solid #dfe3e5;border-radius:12px;background:#fff;box-shadow:0 14px 32px rgba(20,28,27,.12)}
+.search-tools .advanced-search[open] .advanced-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.search-tools .paper-advanced-panel{display:none}
+.search-tools .advanced-search[open] .paper-advanced-panel{display:flex;flex-direction:column;gap:10px}
+.search-tools .advanced-search[open] .paper-advanced-panel{top:calc(100% + 8px);bottom:auto}
+.search-tools .advanced-search[open] .paper-advanced-rows{display:grid;gap:8px}
+.search-tools .advanced-search .advanced-scope{display:grid;gap:5px;color:#5e666b;font-size:11px;font-weight:600}
+.search-tools .advanced-search .advanced-scope select{width:100%;height:38px;padding:0 10px;border:1px solid #d6dce0;border-radius:9px;background:#fff;color:#30363a;font:inherit;font-weight:500}
+.search-tools .advanced-search[open] .advanced-grid .advanced-scope{grid-column:1/-1}
+.search-tools .advanced-search[open] .advanced-grid:has(.news-advanced-row){grid-template-columns:1fr}
+.search-tools .advanced-search .news-advanced-row{display:grid;grid-template-columns:92px 116px minmax(0,1fr);gap:8px;align-items:center;color:#5e666b;font-size:11px;font-weight:600}
+.search-tools .advanced-search .news-advanced-row select,.search-tools .advanced-search .news-advanced-row input{width:100%;height:36px;padding:0 9px;border:1px solid #d6dce0;border-radius:8px;background:#fff;color:#30363a;font:inherit;font-weight:500}
+.search-tools .advanced-search .news-advanced-row input{font-weight:400}
+.search-tools .advanced-search[open] .paper-advanced-add,.search-tools .advanced-search[open] .paper-advanced-remove{align-self:flex-end;border:0!important;background:transparent!important;color:var(--topic,#087f73);box-shadow:none}
+.search-tools .advanced-search[open] .paper-advanced-add:hover,.search-tools .advanced-search[open] .paper-advanced-remove:hover{background:transparent!important;color:#1d1d1f}
+.search-tools .advanced-search .advanced-search-hint{display:block;margin-top:1px;color:#7b8388;font-size:11px;line-height:1.45}
+.search-stack:has(.paper-advanced-search[open]){margin-bottom:28px}
+
+/* 全站命中词统一为浅黄色底纹，贴近岗位列表中的检索标记。 */
+main mark{
+  padding:0 .14em!important;
+  margin:0;
+  border-radius:2px;
+  background:#fff1bc!important;
+  color:inherit!important;
+  font-weight:650;
+  text-shadow:none!important;
+  box-shadow:none!important;
+  animation:none!important;
+}
+/* 深色内容面同用浅黄底纹，转换为深色字以保证对比度。 */
+.theme-dark main mark,.detail-hero main mark{background:#fff1bc!important;color:#594300!important;text-shadow:none!important}
+
+/* 五类列表页共享的图文页头。 */
+.listing-hero.listing-hero-unified{display:flex;align-items:center;min-height:0;margin:26px 0 22px;padding:0;background:transparent;text-align:left}
+.listing-hero-unified .listing-hero-copy{display:grid!important;grid-template-columns:46px minmax(0,1fr)!important;grid-template-rows:46px auto!important;grid-template-areas:"icon title" "intro intro"!important;column-gap:14px;row-gap:5px;min-width:0}
+.listing-hero-unified .listing-hero-icon{display:grid;flex:0 0 46px;width:46px;height:46px;place-items:center;margin:0;border:1px solid color-mix(in srgb,var(--topic) 26%,#fff);border-radius:13px;background:#fff;color:var(--topic)}
+.listing-hero-unified .listing-hero-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.listing-hero-unified .listing-hero-icon{grid-area:icon!important;grid-row:1!important;grid-column:1!important;align-self:center}
+.listing-hero-unified h1{grid-area:title!important;grid-row:1!important;grid-column:2!important;align-self:center;margin:0;color:#191b1f;font-size:28px;font-weight:650;letter-spacing:-.03em}
+.listing-hero-unified p{grid-area:intro!important;grid-row:2!important;grid-column:1/-1!important;margin:0;color:#566560;font-size:13px}
+
+/* 每一类内容以专属图形轮廓建立识别，同时共享同一克制的版式。 */
+.theme-job .listing-hero-icon{border-radius:13px;background:#effaf7}
+.theme-company .listing-hero-icon{border-radius:13px;background:#f0f6ff}
+.theme-paper .listing-hero-icon{border-radius:10px 10px 15px 10px;background:#f5f1ff}
+.theme-model .listing-hero-icon{border-radius:16px 16px 7px 7px;background:#fff7e9}
+.theme-news .listing-hero-icon{border-radius:12px 12px 12px 4px;background:#fff2ed}
+.theme-company .listing-hero-unified h1{letter-spacing:-.025em}
+.theme-paper .listing-hero-unified p{color:#655d75}
+.theme-model .listing-hero-unified p{color:#745f3b}
+.theme-news .listing-hero-unified p{color:#765d54}
+.listing-page .search-form button,.listing-page .search-form button:hover{background:var(--topic)}
+.job-title-line{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+.job-title-line h3{min-width:0}
+.job-salary{flex:0 0 auto;color:#087b6e;font-size:14px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.job-card{position:relative}.job-card article{padding-right:190px}.job-card .job-salary{position:absolute;right:4px;top:37px;font-size:15px;text-align:right}
+
+/* 资讯筛选里的日期框与自定义下拉同高，去掉标签后基线对齐 */
+.date-filter input{height:38px;border-color:#d8dcde;border-radius:9px}
+
+/* ---- 标题即链接：默认跟随正文颜色，悬停才染主题色 ---- */
+.result h3 a,
+.result h3 a.row-title{color:inherit;text-decoration:none}
+.result h3 a:hover,
+.result h3 a.row-title:hover{color:var(--topic,#087f73)}
+.theme-job .result h3 a:visited{color:#087b6e}.theme-company .result h3 a:visited{color:#2871d5}.theme-paper .result h3 a:visited{color:#7757c7}.theme-model .result h3 a:visited{color:#a96408}.theme-news .result h3 a:visited{color:#c95d33}
+.listing-page .result h3 a{transition:color .16s ease}.listing-page .result h3 a:hover{color:var(--topic)!important}
+
+/* 标题默认保持正文黑色，仅交互瞬间使用主题色。 */
+.listing-page .result h3 a:visited{color:#1d1d1f}.listing-page .result h3 a:active{color:var(--topic)!important}
+
+/* ---- 微交互：仅在用户未关闭动效时启用 ---- */
+@media(prefers-reduced-motion:no-preference){
+  a.pager-btn:active{transform:translateY(1px)}
+  .star:active{transform:scale(.94)}
+  .open:active{transform:translateY(1px)}
+  .cs-option{transition:background-color .12s,color .12s}
+}
+
+@media(max-width:700px){
+  .search-stack{gap:8px;margin-bottom:22px}
+  .search-stack .search-row{flex-basis:100%}
+  .search-tools{width:100%;gap:8px}
+  .search-tools>select{height:42px;flex:1;min-width:0;border-radius:10px}
+  .search-tools .advanced-search{height:42px;border-radius:10px}
+  .search-tools .advanced-search summary{height:40px}
+  .search-tools .advanced-search[open] .advanced-grid,.search-tools .advanced-search[open] .paper-advanced-panel{right:auto;left:0;width:min(100vw - 32px,540px)}
+  .search-tools .advanced-search .news-advanced-row{grid-template-columns:1fr 1fr}
+  .search-tools .advanced-search .news-advanced-row input{grid-column:1/-1}
+  .search-stack:has(.paper-advanced-search[open]){margin-bottom:22px}
+  .listing-hero.listing-hero-unified{min-height:0;margin:18px 0;padding:0}
+  .listing-hero-unified h1{font-size:24px}
+  .listing-hero-unified p{max-width:280px;font-size:12px;line-height:1.5}
+  .job-title-line{align-items:flex-start;gap:10px}
+  .job-card article{padding-right:0}.job-card .job-salary{position:static;font-size:12px}
+}

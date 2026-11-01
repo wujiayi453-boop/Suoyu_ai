@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; padding: 30px; background: #f4f7f7; font-family: "Microsoft YaHei", sans-serif; }
+  .card { width: 1120px; padding: 26px 30px; background: #172326; border-radius: 14px; box-shadow: 0 10px 30px #b6c6c6; }
+  .label { color: #72d7d2; font-size: 22px; font-weight: 700; margin-bottom: 14px; }
+  pre { margin: 0; color: #e8f2f2; font: 17px/1.55 Consolas, "Courier New", monospace; white-space: pre-wrap; }
+  .kw { color: #8bd2ff; } .fn { color: #ffcf77; } .str { color: #a9d98e; } .cm { color: #94a5a5; }
+</style>
+<section class="card">
+  <div class="label">关键代码 2：统一检索接口调用与结果渲染（public/js/app.js）</div>
+  <pre><span class="kw">function</span> <span class="fn">runGlobalSearch</span>(query) {
+  <span class="kw">const</span> renderId = ++state.renderId;
+  <span class="kw">const</span> fallback = groupedFallback(query);
+  <span class="kw">if</span> (!isServer()) <span class="kw">return</span> renderGrouped(query, fallback, renderId);
+
+  api(<span class="str">`/api/search?group=1&amp;q=${encodeURIComponent(query)}`</span>).then(data =&gt; {
+    <span class="kw">if</span> (renderId !== state.renderId) <span class="kw">return</span>;
+    Object.values(data.groups).forEach(group =&gt; remember(group.results));
+    renderGrouped(query, data.groups, renderId, data.total);
+  }).catch(() =&gt; renderGrouped(query, fallback, renderId));
+}
+
+<span class="cm">// 后端不可用时保留本地预览数据，保证离线演示可用。</span></pre>
+</section>

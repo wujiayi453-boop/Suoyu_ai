@@ -1,0 +1,245 @@
+/* 由首页方案预览接入的真实首页：沿用站点黑、白、青绿色与现有路由。 */
+body:has(.applied-hero) .layout main{max-width:1280px;padding:72px 24px 0}
+.applied-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:56px;align-items:center;min-height:498px;padding:54px 58px;border:1px solid #d8e6e2;border-radius:24px;background:#f3f8f6}
+.applied-hero-copy h1{max-width:650px;margin:0;color:#1d1d1f;font-size:clamp(46px,5.4vw,68px);font-weight:720;line-height:1.06;letter-spacing:-.052em}
+.applied-hero-copy>p{max-width:575px;margin:20px 0 0;color:#61706c;font-size:16px;line-height:1.82}
+.applied-hero .large-search{max-width:590px;margin:30px 0 0;border-radius:999px;background:#fff;box-shadow:0 16px 35px -27px rgba(24,52,45,.3)}
+.applied-hero .large-search button{border-radius:999px;background:#1d1d1f}
+.applied-overview{padding:25px;border:1px solid #27312f;border-radius:18px;background:#1d2422;color:#fff;box-shadow:0 22px 38px -28px rgba(0,0,0,.55)}
+.applied-overview>small{display:block;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.17);color:#b7c4bf;font-size:12px}
+.applied-overview>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:8px}
+.applied-overview>div>div{padding:17px 8px;border-bottom:1px solid rgba(255,255,255,.12)}
+.applied-overview strong,.applied-overview span{display:block}.applied-overview strong{font-size:25px;line-height:1.1;font-variant-numeric:tabular-nums}.applied-overview span{margin-top:5px;color:#9fb0aa;font-size:12px}.applied-overview>div>div:last-child{grid-column:1 / -1;border-bottom:0}
+.applied-section{display:flex;min-height:0;padding:58px 0;flex-direction:column;justify-content:center;background:#fff}.applied-section+.applied-section{border-top:1px solid #eef0ee}.applied-section>header{text-align:center}.applied-section>header>p{margin:0 0 7px;color:#6e6e73;font-family:Georgia,"Times New Roman",serif;font-size:14px;letter-spacing:.16em}.applied-section>header h2{margin:0;color:#1d1d1f;font-size:clamp(34px,4vw,46px);line-height:1.2;letter-spacing:-.04em}.applied-section>header span{display:block;margin-top:10px;color:#6e6e73;font-size:16px}.applied-section>header a{display:inline-block;margin-top:15px;color:#087f73;font-size:14px}.applied-jobs-grid{display:grid;grid-template-columns:1.04fr repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:16px;height:318px;margin-top:28px}.applied-job{display:flex;min-width:0;padding:16px 20px;border:1px solid #e5e5ea;border-radius:16px;flex-direction:column;background:#fff;color:#1d1d1f;overflow:hidden}.applied-job:first-child{grid-row:span 2}.applied-job>span{display:inline-flex;width:max-content;padding:3px 10px;border-radius:999px;background:#e9ebed;color:#3c3c43;font-size:11px}.applied-job h3{display:-webkit-box;overflow:hidden;margin:11px 0 4px;font-size:15px;line-height:1.35;letter-spacing:-.02em;-webkit-line-clamp:2;-webkit-box-orient:vertical}.applied-job:first-child h3{font-size:20px;-webkit-line-clamp:3}.applied-job p{display:-webkit-box;overflow:hidden;margin:0;color:#6e6e73;font-size:12px;line-height:1.45;-webkit-line-clamp:1;-webkit-box-orient:vertical}.applied-job strong{margin-top:8px;color:#087f73;font-size:13px}.applied-job:hover,.applied-company:hover,.applied-news:hover{border-color:#b9d5ce;box-shadow:0 10px 22px -18px rgba(0,0,0,.45);transform:translateY(-2px)}
+.applied-company-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:32px}.applied-company{min-height:176px;padding:24px 12px;border:1px solid #e5e5ea;border-radius:17px;background:#fff;text-align:center}.applied-company b{display:grid;width:56px;height:56px;place-items:center;margin:auto;border-radius:16px;background:#edf5f3;color:#087f73;font-size:22px}.applied-company h3{margin:15px 0 3px;font-size:15px}.applied-company p{margin:0;color:#6e6e73;font-size:12px}
+.applied-news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:32px}.applied-news{overflow:hidden;border:1px solid #e5e5ea;border-radius:16px;background:#fff}.applied-news-image{display:grid;height:184px;place-items:center;overflow:hidden;background:#2b2e33;color:#fff;font:700 23px ui-monospace,monospace;letter-spacing:.12em}.applied-news-image.tone-0{background:#2b2e33}.applied-news-image.tone-1{background:#3a5687}.applied-news-image.tone-2{background:#2f6b5e}.applied-news-image.tone-3{background:#8a6234}.applied-news-image.tone-4{background:#63507f}.applied-news-image.tone-5{background:#9a4b41}.applied-news-image.has-img{background:#eef3f1;color:transparent;font-size:0}.applied-news-image img{display:block;width:100%;height:100%;object-fit:cover}.applied-news h3{display:-webkit-box;overflow:hidden;margin:17px 18px 0;color:#1d1d1f;font-size:16px;line-height:1.45;-webkit-line-clamp:2;-webkit-box-orient:vertical}.applied-news p{display:-webkit-box;overflow:hidden;margin:9px 18px 0;color:#6e6e73;font-size:13px;line-height:1.55;-webkit-line-clamp:2;-webkit-box-orient:vertical}.applied-news small{display:block;margin:15px 18px 19px;color:#6e6e73;font-size:11px}
+.applied-research-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;max-width:1232px;width:100%;margin:32px auto 0}.applied-research-column{display:grid;grid-template-rows:56px repeat(3,72px);border-top:1px solid #d8dadd}.applied-research-column h3{margin:0;padding:15px 0 12px;font-size:20px}.applied-research-column a{display:flex;align-items:flex-start;padding:15px 0;border-top:1px solid #e5e5ea;color:#1d1d1f;font-size:15px;font-weight:620;line-height:1.42}.applied-research-column a:hover{color:#087f73}
+.applied-company b{position:relative;overflow:hidden}
+.applied-company b>span{display:grid;width:100%;height:100%;place-items:center}
+.applied-company b.has-logo{background:#fff;box-shadow:inset 0 0 0 1px #e9ebea}
+.applied-company b img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:6px;background:#fff}
+.applied-footer{display:flex;width:100%;align-items:flex-start;justify-content:space-between;gap:40px;margin:0;padding:46px max(24px,calc((100% - 1232px)/2));background:#17191a;color:#fff}.applied-footer>div{display:grid;gap:9px}.applied-footer>div span{color:#aeb5b3;font-size:13px}.applied-footer nav{display:flex;flex-wrap:wrap;gap:30px 64px}.applied-footer a{color:#aeb5b3;font-size:13px}.applied-footer a:hover{color:#7ee0cf}.applied-footer .footer-col{display:grid;gap:10px;align-content:start}.applied-footer .footer-col h4{margin:0;color:#fff;font-size:13px;font-weight:600}.applied-footer .footer-col a{color:#aeb5b3;font-size:13px}
+@media(max-width:800px){body:has(.applied-hero) .layout main{padding-top:82px}.applied-hero{grid-template-columns:1fr;gap:28px;min-height:0;padding:42px 28px}.applied-hero-copy{text-align:center}.applied-hero-copy h1{margin:auto;font-size:46px}.applied-hero-copy>p{margin-inline:auto}.applied-hero .large-search{margin-inline:auto}.applied-overview>div{grid-template-columns:repeat(3,minmax(0,1fr))}.applied-overview>div>div:last-child{grid-column:auto}.applied-section{min-height:auto;padding:62px 0}.applied-jobs-grid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:none}.applied-job{min-height:132px}.applied-job:first-child{grid-row:auto;grid-column:span 2;min-height:190px}.applied-company-grid{grid-template-columns:repeat(2,1fr)}.applied-news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.applied-news:last-child:nth-child(odd){grid-column:1/-1}.applied-news-image{height:186px}.applied-research-grid{gap:28px}.applied-footer{padding-inline:20px}}
+@media(max-width:520px){body:has(.applied-hero) .layout main{padding:78px 16px 0}.applied-hero{padding:38px 18px;border-radius:18px}.applied-hero-copy h1{font-size:38px}.applied-overview{padding:20px}.applied-overview strong{font-size:20px}.applied-section{padding:52px 0}.applied-jobs-grid,.applied-research-grid{grid-template-columns:1fr}.applied-job:first-child{grid-column:auto}.applied-company-grid{gap:10px}.applied-company{min-height:153px;padding:19px 8px}.applied-news-grid{grid-template-columns:1fr}.applied-news:last-child:nth-child(odd){grid-column:auto}.applied-news-image{height:185px}.applied-research-column{grid-template-rows:52px repeat(3,minmax(58px,auto))}.applied-footer{display:grid;gap:25px;padding:36px 16px}}
+/* 首页首屏：用有层次的“信息场”承托搜索，而非额外堆叠装饰。 */
+.applied-hero{position:relative;isolation:isolate;overflow:hidden;border-color:#d4e2dd;background:radial-gradient(circle at 76% 24%,rgba(13,127,115,.12),transparent 25%),radial-gradient(circle at 14% 84%,rgba(71,119,172,.08),transparent 30%),#f1f7f5}
+.applied-hero:before{content:"";position:absolute;z-index:-1;right:-110px;top:-170px;width:510px;height:510px;border:1px solid rgba(8,127,115,.15);border-radius:50%;box-shadow:0 0 0 42px rgba(8,127,115,.035),0 0 0 84px rgba(8,127,115,.018);transform:rotate(-14deg)}
+.applied-hero-copy h1{max-width:680px;font-family:"PingFang SC","Microsoft YaHei UI","Microsoft YaHei",ui-sans-serif,system-ui,sans-serif;font-weight:780;line-height:1.08;letter-spacing:-.06em;text-wrap:balance}
+.applied-hero-copy>p{max-width:35em;color:#506662;font-size:16px;line-height:1.9;letter-spacing:.015em}
+.applied-overview{position:relative;overflow:hidden;background:#182321;box-shadow:0 24px 42px -30px rgba(8,33,28,.72)}
+.applied-overview:after{content:"";position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(146,239,220,.76),transparent);opacity:.7;transform:translateY(-20px)}
+.applied-overview strong{font-family:ui-sans-serif,system-ui,"PingFang SC",sans-serif;font-weight:760;letter-spacing:-.035em}
+.applied-hero .large-search{position:relative;z-index:1;border-color:rgba(23,58,51,.13);box-shadow:0 18px 35px -27px rgba(24,52,45,.34)}
+.applied-hero .large-search:focus-within{box-shadow:0 0 0 4px rgba(8,127,115,.12),0 18px 35px -27px rgba(24,52,45,.34)}
+
+@media(prefers-reduced-motion:no-preference){
+  .applied-hero:before{animation:hero-orbit 14s cubic-bezier(.45,0,.55,1) infinite alternate}
+  .applied-overview{animation:overview-unfold .68s .08s cubic-bezier(.16,1,.3,1) both}
+  .applied-overview:after{animation:overview-scan 2.8s .55s cubic-bezier(.16,1,.3,1) infinite}
+  @keyframes hero-orbit{to{transform:rotate(9deg) scale(1.05)}}
+  @keyframes overview-unfold{from{clip-path:inset(0 0 100% 0);filter:brightness(.85)}to{clip-path:inset(0);filter:brightness(1)}}
+  @keyframes overview-scan{0%,12%{transform:translateY(-20px);opacity:0}24%{opacity:.7}62%,100%{transform:translateY(300px);opacity:0}}
+}
+@media(prefers-reduced-motion:reduce){.applied-hero:before{transform:rotate(-14deg)}.applied-overview:after{display:none}}
+
+/* 五边形数据网：节点关系在背景中可见，数值保持在前景。 */
+.applied-overview{display:grid;place-items:center;width:min(100%,400px);min-height:430px;margin-inline:auto;padding:92px 72px 60px;border:0;border-radius:0;background:#17221f;clip-path:polygon(50% 0,100% 36%,81% 100%,19% 100%,0 36%);box-shadow:none;filter:drop-shadow(0 20px 22px rgba(17,38,33,.22))}
+.applied-overview>*:not(.overview-network){position:relative;z-index:1;width:100%}
+.overview-network{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px);opacity:.5;pointer-events:none}
+.overview-network-lines{fill:none;stroke:#66b9ab;stroke-width:1;stroke-opacity:.46}
+.overview-network-nodes{fill:#b9f0e4;stroke:#17221f;stroke-width:3}
+.applied-overview>small{padding-bottom:13px;color:#c2d2cd;letter-spacing:.04em}
+.applied-overview>div{position:relative;z-index:1;width:100%;margin-top:8px}
+.applied-overview>div>div{padding:17px 10px;border-bottom-color:rgba(188,238,225,.18)}
+.applied-overview strong{color:#f6fffc;text-shadow:0 1px 0 rgba(0,0,0,.16)}
+.applied-overview span{color:#bed1ca}
+.applied-overview:after{z-index:2;left:14%;right:14%;background:linear-gradient(90deg,transparent,rgba(183,247,232,.86),transparent)}
+@media(prefers-reduced-motion:no-preference){.overview-network{animation:network-breathe 4.6s ease-in-out infinite alternate}.overview-network-nodes{animation:node-pulse 2.3s ease-in-out infinite alternate}@keyframes network-breathe{to{opacity:.72;transform:scale(1.015)}}@keyframes node-pulse{to{fill:#effff9}}}
+@media(max-width:800px){.applied-overview{width:min(100%,390px);min-height:410px;padding:86px 68px 54px}.applied-overview>div{grid-template-columns:repeat(2,minmax(0,1fr))}.applied-overview>div>div:last-child{grid-column:1/-1}}
+@media(max-width:520px){.applied-overview{min-height:370px;padding:78px 58px 44px}.overview-network{inset:16px;width:calc(100% - 32px);height:calc(100% - 32px)}.applied-overview strong{font-size:20px}}
+
+/* 无底色五边形网络：五组数据分别锚定在五个顶点。 */
+.applied-news-image img{object-fit:contain;background:#f4f6f5}
+.applied-overview{position:relative;display:block;width:min(100%,430px);height:430px;min-height:0;margin-inline:auto;padding:0;border:0;border-radius:0;background:transparent!important;clip-path:none;box-shadow:none;filter:none;overflow:visible}
+.applied-overview:after{display:none}
+.applied-overview>*:not(.overview-network){position:relative;z-index:1;width:100%}
+.overview-network{position:absolute;inset:17px;width:calc(100% - 34px);height:calc(100% - 34px);opacity:.76;pointer-events:none}
+.overview-network-lines{fill:none;stroke:#238c7e;stroke-width:1.25;stroke-opacity:.58}
+.overview-network-nodes{fill:#0b8878;stroke:#f1f7f5;stroke-width:3}
+.applied-overview>small{position:absolute!important;left:50%;top:44%;width:auto!important;padding:0!important;transform:translate(-50%,-50%);border:0;color:#52736c;letter-spacing:.08em;font-size:11px;white-space:nowrap}
+.applied-overview>div{position:absolute!important;inset:0;z-index:1;width:100%;height:100%;margin:0;display:block}
+.applied-overview>div>div{position:absolute;display:block;padding:0;border:0;text-align:center}
+.applied-overview>div>div:nth-child(1){top:0;left:50%;transform:translateX(-50%)}
+.applied-overview>div>div:nth-child(2){top:28%;right:0;transform:translateX(5%)}
+.applied-overview>div>div:nth-child(3){right:15%;bottom:0}
+.applied-overview>div>div:nth-child(4){bottom:0;left:15%}
+.applied-overview>div>div:nth-child(5){top:28%;left:0;transform:translateX(-5%)}
+.applied-overview strong{color:#173c35;text-shadow:none;font-size:26px}
+.applied-overview span{margin-top:2px;color:#56726b;font-size:12px}
+@media(prefers-reduced-motion:no-preference){.overview-network{animation:network-breathe 4.6s ease-in-out infinite alternate}.overview-network-nodes{animation:node-pulse 2.3s ease-in-out infinite alternate}.applied-overview>div>div{animation:data-settle 3.4s ease-in-out infinite alternate}@keyframes network-breathe{to{opacity:.94;transform:scale(1.012)}}@keyframes node-pulse{to{fill:#3ab29e}}@keyframes data-settle{to{translate:0 -3px}}.applied-overview>div>div:nth-child(2),.applied-overview>div>div:nth-child(4){animation-delay:.45s}.applied-overview>div>div:nth-child(3){animation-delay:.85s}.applied-overview>div>div:nth-child(5){animation-delay:1.2s}}
+@media(max-width:800px){.applied-overview{width:min(100%,400px);height:400px}.overview-network{inset:15px;width:calc(100% - 30px);height:calc(100% - 30px)}}
+@media(max-width:520px){.applied-overview{width:min(100%,340px);height:340px}.applied-overview strong{font-size:21px}.applied-overview>small{top:45%}}
+
+/* 靛蓝数据网络：以缓慢流线和错峰节点强调“持续更新”的数据状态。 */
+.overview-network{filter:drop-shadow(0 6px 12px rgba(87,86,202,.13))}
+.overview-network-lines{stroke:#625fd1;stroke-opacity:.58}
+.overview-network-lines path{stroke-dasharray:5 7}
+.overview-network-nodes{fill:#625fd1;stroke:#f1f7f5}
+.applied-overview>small{color:#68688b}.applied-overview strong{color:#32325f}.applied-overview span{color:#626987}
+@media(prefers-reduced-motion:no-preference){.overview-network-lines path{animation:network-flow 8s linear infinite}.overview-network-lines path:nth-child(2){animation-direction:reverse;animation-duration:11s}.overview-network-nodes circle{animation:node-flicker 3.2s ease-in-out infinite alternate}.overview-network-nodes circle:nth-child(2){animation-delay:.45s}.overview-network-nodes circle:nth-child(3){animation-delay:.9s}.overview-network-nodes circle:nth-child(4){animation-delay:1.35s}.overview-network-nodes circle:nth-child(5){animation-delay:1.8s}.overview-network-nodes circle:nth-child(6){animation-delay:2.25s}@keyframes network-flow{to{stroke-dashoffset:-96}}@keyframes node-flicker{to{fill:#9c8cff;filter:drop-shadow(0 0 4px rgba(98,95,209,.55))}}}
+
+/* 深色毛玻璃网络舱：以多层轨迹、连接线和节点表达持续计算。 */
+.applied-overview{border:1px solid rgba(189,204,255,.22);border-radius:24px;background:radial-gradient(circle at 50% 46%,rgba(87,99,215,.20),transparent 38%),radial-gradient(circle at 15% 13%,rgba(71,183,210,.12),transparent 34%),rgba(8,12,20,.79)!important;backdrop-filter:blur(18px) saturate(135%);box-shadow:0 24px 48px rgba(10,15,27,.25),inset 0 1px 0 rgba(255,255,255,.09);overflow:hidden}
+.overview-network{opacity:.9;filter:drop-shadow(0 7px 15px rgba(83,120,255,.25))}
+.overview-network-orbits{fill:none;stroke:#7987ff;stroke-width:.75;stroke-opacity:.28;stroke-dasharray:3 8}
+.overview-network-lines{stroke:#8a98ff;stroke-width:1.15;stroke-opacity:.58}
+.overview-network-lines path{stroke-dasharray:3 7}
+.overview-network-lines path:nth-child(2){stroke:#69d5ed;stroke-opacity:.46}.overview-network-lines path:nth-child(3){stroke:#c39cff;stroke-opacity:.4}.overview-network-lines path:nth-child(4){stroke:#62b7ff;stroke-opacity:.32}
+.overview-network-nodes{fill:#b2bdff;stroke:#121827;stroke-width:3}.overview-network-nodes circle:nth-child(n+7){fill:#70dff1}
+.applied-overview>small{color:#cad0ed;text-shadow:0 1px 10px rgba(154,173,255,.2)}.applied-overview strong{color:#f5f7ff;text-shadow:0 1px 12px rgba(138,152,255,.35)}.applied-overview span{color:#b4bddb}
+@media(prefers-reduced-motion:no-preference){.overview-network-orbits{animation:orbit-drift 16s linear infinite}.overview-network-lines path:nth-child(3){animation:network-flow 13s linear infinite reverse}.overview-network-lines path:nth-child(4){animation:network-flow 18s linear infinite}.overview-network-nodes circle:nth-child(n+7){animation:node-spark 2.7s ease-in-out infinite alternate}@keyframes orbit-drift{to{stroke-dashoffset:-132;rotate:1turn}}@keyframes node-spark{to{fill:#e0dbff;filter:drop-shadow(0 0 5px rgba(132,150,255,.8))}}}
+
+/* 黑色五边形作为网络舱，顶点数据向内收束。 */
+.applied-overview{border:0;border-radius:0;background:radial-gradient(circle at 50% 48%,rgba(91,92,197,.25),transparent 37%),radial-gradient(circle at 18% 16%,rgba(38,170,202,.14),transparent 36%),rgba(5,8,14,.9)!important;clip-path:polygon(50% 0,100% 36%,81% 100%,19% 100%,0 36%);box-shadow:none;filter:drop-shadow(0 22px 24px rgba(7,11,22,.28));overflow:hidden}
+.applied-overview>div>div:nth-child(1){top:7%}.applied-overview>div>div:nth-child(2){top:35%;right:14%;transform:translateX(5%)}.applied-overview>div>div:nth-child(3){right:27%;bottom:8%}.applied-overview>div>div:nth-child(4){bottom:8%;left:27%}.applied-overview>div>div:nth-child(5){top:35%;left:14%;transform:translateX(-5%)}
+.overview-network-lines path:nth-child(5){stroke:#79d8ff;stroke-opacity:.42;animation-duration:15s}.overview-network-lines path:nth-child(6){stroke:#b598ff;stroke-opacity:.42;animation-duration:20s}.overview-network-lines path:nth-child(7){stroke:#66cdec;stroke-opacity:.34;animation-duration:24s}
+.applied-job:visited h3{color:#087b6e}.applied-company:visited h3{color:#2871d5}.applied-news:visited h3{color:#c95d33}.research-paper a:visited>span{color:#7757c7}.research-model a:visited>span{color:#a96408}
+.applied-job h3,.applied-company h3,.applied-news h3,.applied-research-column a>span{transition:color .16s ease}.applied-job:hover h3{color:#087b6e}.applied-company:hover h3{color:#2871d5}.applied-news:hover h3{color:#c95d33}.research-paper a:hover>span{color:#7757c7}.research-model a:hover>span{color:#a96408}
+
+/* 序号保持定位作用，但不再使用圆形装饰；标题与分类列表同一字阶。 */
+.applied-research-column a{font-size:16px;font-weight:600;line-height:1.4}
+.applied-research-column a b{display:block;width:28px;height:auto;border:0;border-radius:0;color:#7f8987;font:500 11px ui-monospace,"SF Mono",monospace;line-height:1.4}
+.research-model a b{border:0;color:#9b6821}.research-paper a:hover>span{color:#7757c7}.research-model a:hover>span{color:#a96408}
+
+/* 不让旧的面板展开动画覆盖五边形裁切。 */
+.applied-overview{animation:none!important}
+
+/* 将深色承载层限定为五边形本身，外部完全透出首页背景。 */
+.applied-overview{isolation:isolate;background:transparent!important;clip-path:none!important;-webkit-clip-path:none!important;filter:none;overflow:visible}
+.applied-overview:before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 50% 46%,rgba(91,92,197,.31),transparent 35%),radial-gradient(circle at 22% 20%,rgba(27,183,216,.17),transparent 30%),rgba(5,8,14,.94);clip-path:polygon(50% 1%,99% 36%,80% 99%,20% 99%,1% 36%);-webkit-clip-path:polygon(50% 1%,99% 36%,80% 99%,20% 99%,1% 36%);filter:drop-shadow(0 22px 24px rgba(7,11,22,.28))}
+.applied-overview:after{content:"";position:absolute;inset:12px;z-index:0;display:block;border:1px solid rgba(136,154,255,.29);clip-path:polygon(50% 1%,99% 36%,80% 99%,20% 99%,1% 36%);-webkit-clip-path:polygon(50% 1%,99% 36%,80% 99%,20% 99%,1% 36%);box-shadow:inset 0 0 34px rgba(101,116,255,.14),0 0 22px rgba(88,101,241,.13);pointer-events:none}
+.overview-network{z-index:1}.applied-overview>*:not(.overview-network){z-index:2}
+.overview-network-orbits{stroke-opacity:.42}.overview-network-lines{stroke-width:1.3}.overview-network-nodes circle:nth-child(n+12){fill:#c4a6ff}
+
+/* 外层不承担任何颜色或滤镜，黑色只由五边形伪元素绘制。 */
+.applied-overview{background-color:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+
+/* 数据护盾：更规整的正五边形比例、深色层次与一圈冷光结构线。 */
+.applied-overview{width:min(100%,408px);height:408px}
+.applied-overview:before{inset:0;background:radial-gradient(circle at 50% 42%,rgba(92,108,255,.32),transparent 29%),radial-gradient(circle at 25% 22%,rgba(38,214,239,.13),transparent 34%),linear-gradient(145deg,#111a29 0%,#060910 45%,#10131d 100%);clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);-webkit-clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);filter:drop-shadow(0 17px 20px rgba(7,11,22,.28))}
+.applied-overview:after{inset:10px;border:1px solid rgba(132,161,255,.42);clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);-webkit-clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);box-shadow:inset 0 0 0 1px rgba(62,224,239,.08),inset 0 0 34px rgba(90,103,255,.13),0 0 18px rgba(73,105,237,.16)}
+.overview-network{inset:23px;width:calc(100% - 46px);height:calc(100% - 46px)}
+.applied-overview>div>div:nth-child(1){top:8%}.applied-overview>div>div:nth-child(2){top:35%;right:15%}.applied-overview>div>div:nth-child(3){right:27%;bottom:9%}.applied-overview>div>div:nth-child(4){bottom:9%;left:27%}.applied-overview>div>div:nth-child(5){top:35%;left:15%}
+@media(max-width:800px){.applied-overview{width:min(100%,380px);height:380px}}@media(max-width:520px){.applied-overview{width:min(100%,330px);height:330px}.overview-network{inset:19px;width:calc(100% - 38px);height:calc(100% - 38px)}}
+
+/* 仅保留内部五边形底色，外层与轮廓不添加装饰。 */
+.applied-overview:before{background:#0d111b;filter:none}.applied-overview:after{display:none}.overview-network{filter:none}
+
+/* 黑色只铺在网络核心的内层五边形，外层数据与连线保持透明。 */
+.applied-overview:before{inset:64px 56px;background:#0d111b;clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);-webkit-clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%)}
+@media(max-width:520px){.applied-overview:before{inset:52px 45px}}
+
+/* 重构为单一、自包含的数据五边形：数据与网络都不再溢出形状。 */
+.applied-overview{width:min(100%,390px);height:390px}
+.applied-overview:before{inset:8px;background:radial-gradient(circle at 50% 48%,rgba(82,93,211,.27),transparent 36%),#0d111b;clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);-webkit-clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%)}
+.overview-network{inset:26px;width:calc(100% - 52px);height:calc(100% - 52px);clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);-webkit-clip-path:polygon(50% 1%,98% 35%,80% 98%,20% 98%,2% 35%);opacity:.78}
+.applied-overview>small{top:48%;color:#bfc8e6}.applied-overview strong{color:#f3f5ff;font-size:23px}.applied-overview span{color:#b9c2dd}
+.applied-overview>div>div:nth-child(1){top:10%;left:50%}.applied-overview>div>div:nth-child(2){top:36%;right:17%;transform:none}.applied-overview>div>div:nth-child(3){right:28%;bottom:13%}.applied-overview>div>div:nth-child(4){bottom:13%;left:28%}.applied-overview>div>div:nth-child(5){top:36%;left:17%;transform:none}
+@media(max-width:800px){.applied-overview{width:min(100%,360px);height:360px}.overview-network{inset:24px;width:calc(100% - 48px);height:calc(100% - 48px)}}@media(max-width:520px){.applied-overview{width:min(100%,320px);height:320px}.applied-overview:before{inset:6px}.overview-network{inset:20px;width:calc(100% - 40px);height:calc(100% - 40px)}.applied-overview strong{font-size:19px}}
+
+/* 数据地图：网络退为背景，数值采用主指标 + 四项指标的稳定网格。 */
+.applied-overview{width:min(100%,370px);height:370px}.applied-overview:before{inset:5px;background:radial-gradient(circle at 50% 50%,rgba(83,94,210,.23),transparent 42%),#0b101a}.overview-network{inset:37px;width:calc(100% - 74px);height:calc(100% - 74px);opacity:.34}
+.applied-overview>small{top:24%;color:#aeb9da;font-size:10px;letter-spacing:.12em}
+.applied-overview>div{inset:28% 21% 14%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1.15fr 1fr 1fr;gap:0;align-items:center}
+.applied-overview>div>div{position:static!important;transform:none!important;right:auto!important;bottom:auto!important;left:auto!important;top:auto!important;padding:7px 4px!important;border:0!important;text-align:center}
+.applied-overview>div>div:nth-child(1){grid-column:1/-1;grid-row:1}.applied-overview>div>div:nth-child(2){grid-column:1;grid-row:2}.applied-overview>div>div:nth-child(3){grid-column:2;grid-row:2}.applied-overview>div>div:nth-child(4){grid-column:1;grid-row:3}.applied-overview>div>div:nth-child(5){grid-column:2;grid-row:3}
+.applied-overview strong{font-size:17px;letter-spacing:-.025em}.applied-overview>div>div:first-child strong{font-size:28px}.applied-overview span{margin-top:1px;font-size:10px;color:#a8b4d1}
+@media(max-width:520px){.applied-overview{width:min(100%,320px);height:320px}.applied-overview>div{inset:29% 20% 13%}.applied-overview>div>div:first-child strong{font-size:24px}.applied-overview strong{font-size:15px}}
+
+/* 数据概览：圆润的单层五边形，五项数据均固定在形内。 */
+.applied-overview{width:min(100%,430px);height:370px;overflow:visible;background:transparent!important}
+.applied-overview:before,.applied-overview:after{display:none!important}
+.overview-network{inset:0!important;width:100%!important;height:100%!important;opacity:1!important;clip-path:none!important;-webkit-clip-path:none!important}
+.overview-panel-shape{fill:#0b101a;stroke:rgba(143,158,255,.62);stroke-width:1.25;vector-effect:non-scaling-stroke}
+.overview-network-orbits,.overview-network-lines,.overview-network-nodes{position:relative;z-index:1}
+.applied-overview>small{top:42%!important;color:#c4cbe2!important;z-index:3!important}
+.applied-overview>div{position:absolute!important;inset:0!important;display:block!important;margin:0!important;z-index:3!important}
+.applied-overview .overview-stat{position:absolute!important;display:block!important;margin:0!important;padding:0!important;border:0!important;transform:none!important;text-align:center;animation:none!important}
+.applied-overview .overview-stat-job{top:15%;left:50%;transform:translateX(-50%)!important}
+.applied-overview .overview-stat-company{top:46%;right:15%}
+.applied-overview .overview-stat-model{top:46%;left:15%}
+.applied-overview .overview-stat-paper{bottom:12%;left:27%}
+.applied-overview .overview-stat-news{right:27%;bottom:12%}
+.applied-overview .overview-stat strong{color:#f4f6ff!important;font-size:18px!important;line-height:1.08;text-shadow:none!important;white-space:nowrap}
+.applied-overview .overview-stat-job strong{font-size:28px!important}
+.applied-overview .overview-stat span{margin-top:2px;color:#b6c0dc!important;font-size:10px!important;white-space:nowrap}
+@media(max-width:800px){.applied-overview{width:min(100%,400px);height:350px}}
+@media(max-width:520px){.applied-overview{width:min(100%,330px);height:300px}.applied-overview .overview-stat-job{top:14%}.applied-overview .overview-stat-company,.applied-overview .overview-stat-model{top:45%}.applied-overview .overview-stat-paper,.applied-overview .overview-stat-news{bottom:11%}.applied-overview .overview-stat strong{font-size:15px!important}.applied-overview .overview-stat-job strong{font-size:23px!important}}
+
+/* 首页内容标题默认不染色；悬浮或按下时才表达内容类型。 */
+.applied-job:visited h3,.applied-company:visited h3,.applied-news:visited h3,.research-paper a:visited>span,.research-model a:visited>span{color:#27332f}.applied-job:hover h3,.applied-job:active h3{color:#087b6e}.applied-company:hover h3,.applied-company:active h3{color:#2871d5}.applied-news:hover h3,.applied-news:active h3{color:#c95d33}.research-paper a:hover>span,.research-paper a:active>span{color:#7757c7}.research-model a:hover>span,.research-model a:active>span{color:#a96408}
+
+/* 研究与模型：两条平行信息流，以栏目、序号和文字密度区分层级。 */
+.applied-research{padding-top:68px!important;padding-bottom:74px!important}
+.applied-research-grid{max-width:1080px;gap:0;margin-top:34px;border-top:1px solid #dfe7e4}
+.applied-research-column{position:relative;display:block;min-width:0;border-top:0;counter-reset:research-item}
+.applied-research-column+.applied-research-column{border-left:1px solid #dfe7e4}
+.applied-research-column>header{display:flex;align-items:baseline;gap:10px;padding:20px 24px 16px;border-bottom:1px solid #dfe7e4}
+.applied-research-column:first-child>header,.applied-research-column:first-child>a{padding-left:0}
+.applied-research-column>header>span{color:#087f73;font:600 10px ui-monospace,"SF Mono",monospace;letter-spacing:.12em}
+.applied-research-column h3{margin:0;padding:0;color:#1d2926;font-size:20px;font-weight:680;letter-spacing:-.025em}
+.applied-research-column a{display:grid;grid-template-columns:28px minmax(0,1fr) 18px;align-items:center;gap:8px;min-height:76px;padding:14px 24px;border-top:0;border-bottom:1px solid #e7ecea;color:#27332f;font-size:14px;font-weight:620;line-height:1.45;transition:color .16s,background-color .16s}
+.applied-research-column a b{display:grid;width:22px;height:22px;place-items:center;border:1px solid #d8e6e1;border-radius:50%;color:#6c827b;font:500 10px ui-monospace,"SF Mono",monospace}
+.applied-research-column a b:before{counter-increment:research-item;content:counter(research-item,decimal-leading-zero)}
+.applied-research-column a>span{display:-webkit-box;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.applied-research-column a i{color:#9caba6;font-size:15px;font-style:normal;transition:transform .16s,color .16s}
+.applied-research-column a:hover{background:#f3f8f6;color:#087f73}.applied-research-column a:hover i{color:#087f73;transform:translateX(3px)}
+.research-model>header>span{color:#b56a08}.research-model a b{border-color:#f1d9b2;color:#9b6821}.research-model a:hover{background:#fff9ef;color:#a96408}.research-model a:hover i{color:#a96408}
+@media(max-width:700px){.applied-research{padding-top:54px!important;padding-bottom:56px!important}.applied-research-grid{grid-template-columns:1fr;gap:28px;border-top:0}.applied-research-column,.applied-research-column+.applied-research-column{border-top:1px solid #dfe7e4;border-left:0}.applied-research-column>header{padding:16px 0 13px}.applied-research-column a,.applied-research-column:first-child>a{padding:13px 0;min-height:66px}}
+
+/* 首页概览：以轻量雷达图呈现五类数据，避免大面积深色图形压迫版面。 */
+.applied-overview{width:min(100%,420px)!important;height:340px!important;overflow:hidden!important;border:1px solid #d8e5e3!important;border-radius:28px!important;background:radial-gradient(circle at 50% 45%,rgba(90,178,202,.14),transparent 42%),#f8fbfb!important;clip-path:none!important;box-shadow:none!important}
+.applied-overview:before,.applied-overview:after{display:none!important}
+.overview-radar{display:block;width:100%;height:100%;overflow:visible}
+.radar-grid polygon,.radar-grid path{fill:none;stroke:#bad4d5;stroke-width:1}.radar-grid polygon{stroke-dasharray:3 4}.radar-area{fill:rgba(42,142,151,.18);stroke:#298b95;stroke-width:1.6}.radar-points circle{fill:#fff;stroke:#298b95;stroke-width:2}.radar-title{fill:#587278;font:600 11px ui-sans-serif,system-ui,"PingFang SC",sans-serif;letter-spacing:.08em}.radar-value{fill:#183c42;font:700 19px ui-sans-serif,system-ui,"PingFang SC",sans-serif;letter-spacing:-.035em}.radar-label{fill:#678087;font:500 10px ui-sans-serif,system-ui,"PingFang SC",sans-serif}
+@media(max-width:520px){.applied-overview{width:min(100%,340px)!important;height:300px!important}.radar-value{font-size:17px}.radar-label{font-size:9px}}
+
+/* 恢复首页标题的克制行宽，避免在宽屏放大为两行大字。 */
+.applied-hero-copy h1{max-width:500px;font-size:clamp(46px,4.4vw,58px);font-weight:780;line-height:1.1;letter-spacing:-.05em;text-wrap:initial}
+.applied-hero-copy>p{max-width:420px;margin-top:18px;color:#61706c;font-size:15px;font-weight:400;line-height:1.78;letter-spacing:0}
+@media(min-width:701px) and (max-width:1050px){.applied-hero{gap:48px}.applied-hero-copy{padding-right:6px}}
+
+@media(prefers-reduced-motion:no-preference){
+  .overview-radar{animation:radar-float 5.6s ease-in-out infinite}
+  .overview-radar .radar-grid polygon{animation:radar-grid-flow 10s linear infinite}
+  .overview-radar .radar-flow-line{animation:radar-flow-dash 2.8s linear infinite}
+  .overview-radar .radar-area{transform-box:fill-box;transform-origin:center;animation:radar-breathe 3.8s ease-in-out infinite}
+  .overview-radar .radar-points circle{transform-box:fill-box;transform-origin:center;animation:radar-point-pulse 2.8s ease-in-out infinite}
+  .overview-radar .radar-points circle:nth-child(2){animation-delay:.4s}.overview-radar .radar-points circle:nth-child(3){animation-delay:.8s}.overview-radar .radar-points circle:nth-child(4){animation-delay:1.2s}.overview-radar .radar-points circle:nth-child(5){animation-delay:1.6s}
+  @keyframes radar-float{50%{transform:translateY(-5px)}}
+  @keyframes radar-grid-flow{to{stroke-dashoffset:-42}}
+  @keyframes radar-flow-dash{to{stroke-dashoffset:-60}}
+  @keyframes radar-breathe{50%{fill-opacity:.34;transform:scale(1.018)}}
+  @keyframes radar-point-pulse{50%{fill:#54c0c4;stroke:#fff;transform:scale(1.38)}}
+}
+.radar-flow-line{fill:none;stroke:#0f9ba6;stroke-width:2.6;stroke-linejoin:round;stroke-dasharray:8 16;opacity:.9}.radar-flow-dot{fill:#fff;stroke:#0f9ba6;stroke-width:2;filter:drop-shadow(0 0 4px rgba(15,155,166,.45))}
+@media(prefers-reduced-motion:reduce){.radar-flow-line,.radar-flow-dot{display:none}}
+
+/* 首屏重新排版：保持叙事与数据并列，但收紧宽屏中的空白和视觉重量。 */
+@media(min-width:701px){
+  .applied-hero{grid-template-columns:minmax(0,1fr) minmax(340px,420px);min-height:500px;gap:clamp(42px,6vw,86px);padding:58px clamp(42px,6vw,76px)}
+  .applied-hero-copy{max-width:820px}.applied-hero-copy h1{max-width:820px;font-size:clamp(50px,5.15vw,68px);line-height:1.08;letter-spacing:-.055em}.applied-hero-copy>p{max-width:720px;margin-top:22px;font-size:16px;line-height:1.82}.applied-hero .large-search{max-width:590px;margin-top:30px}
+  .applied-overview{width:min(100%,420px)!important;height:350px!important;justify-self:center}
+}
+
+/* 连续缓动代替折线跑点，数据始终可读。 */
+@media(prefers-reduced-motion:no-preference){
+  .overview-radar{animation:none!important}
+  .overview-radar .radar-grid polygon,.overview-radar .radar-flow-line{animation:none!important}
+  .overview-radar .radar-area{animation:radar-area-swell 5.8s cubic-bezier(.45,0,.25,1) infinite}
+  .overview-radar .radar-points circle{animation:radar-node-glow 5.8s cubic-bezier(.45,0,.25,1) infinite}
+  .overview-radar .radar-points circle:nth-child(2){animation-delay:.45s}.overview-radar .radar-points circle:nth-child(3){animation-delay:.9s}.overview-radar .radar-points circle:nth-child(4){animation-delay:1.35s}.overview-radar .radar-points circle:nth-child(5){animation-delay:1.8s}
+  @keyframes radar-area-swell{0%,100%{fill-opacity:.18;transform:scale(1)}50%{fill-opacity:.29;transform:scale(1.012)}}
+  @keyframes radar-node-glow{0%,100%{fill:#fff;stroke:#298b95;transform:scale(1)}50%{fill:#d8ffff;stroke:#57bfc5;transform:scale(1.16)}}
+}
+.radar-flow-line,.radar-flow-dot{display:none}

@@ -1,0 +1,44 @@
+/* 筛选控件的「已选中」状态：灰底 + 深字，和默认的白底一眼区分。
+   放在最后一个样式表，靠层叠顺序压过 filters-top.css / satisfied-version.css 里的白底规则。 */
+.filter-row select.filter-picked,
+.filter-row input.filter-picked,
+.listing-filters .filter-row select.filter-picked,
+.listing-filters .filter-row input.filter-picked,
+.result-sort select.filter-picked,
+.search-row select.filter-picked,
+.paper-advanced-row select.filter-picked{border-color:#c9c9c9;background-color:#e5e5e5;color:#1d1d1f;font-weight:600}
+.filter-row select.filter-picked:hover,
+.listing-filters .filter-row select.filter-picked:hover,
+.result-sort select.filter-picked:hover,
+.search-row select.filter-picked:hover{background-color:#dedede}
+.filter-row select.filter-picked:focus-visible,
+.filter-row input.filter-picked:focus-visible,
+.listing-filters .filter-row select.filter-picked:focus-visible,
+.result-sort select.filter-picked:focus-visible,
+.search-row select.filter-picked:focus-visible{border-color:#737373;background-color:#e5e5e5}
+.date-filter.is-picked{color:#1d1d1f;font-weight:600}
+
+/* 自定义下拉（.cs）的「已选中」状态：同样用灰底，选择器加权后压过 custom-select.css 的浅绿底。 */
+.filter-row .cs.is-picked .cs-trigger,
+.listing-filters .filter-row .cs.is-picked .cs-trigger,
+.result-sort .cs.is-picked .cs-trigger,
+.search-row .cs.is-picked .cs-trigger{border-color:#c9c9c9;background-color:#e5e5e5;color:#1d1d1f;font-weight:600}
+.filter-row .cs.is-picked .cs-trigger:hover,
+.listing-filters .filter-row .cs.is-picked .cs-trigger:hover,
+.result-sort .cs.is-picked .cs-trigger:hover,
+.search-row .cs.is-picked .cs-trigger:hover{background-color:#dedede}
+.filter-row .cs.is-picked .cs-trigger:focus-visible,
+.result-sort .cs.is-picked .cs-trigger:focus-visible{border-color:#737373;background-color:#e5e5e5}
+.cs.is-picked .cs-arrow{color:#606060}
+
+/* 原生 select 展开后的选中项：同样用灰底（Chrome / Edge / Safari 支持 option:checked 上色）。 */
+select:hover,
+select:focus{background-color:#f5f5f5}
+select option:hover,
+select option:focus{background:#f5f5f5;color:#1d1d1f}
+select option:checked{background:#e5e5e5;color:#1d1d1f}
+
+/* 搜索范围下拉移出 .search-row 后，选中态沿用同一套灰底规则。 */
+.search-tools select.filter-picked{border-color:#c9c9c9;background-color:#e5e5e5;color:#1d1d1f;font-weight:600}
+.search-tools select.filter-picked:hover{background-color:#dedede}
+.search-tools select.filter-picked:focus-visible{border-color:#737373;background-color:#e5e5e5}

@@ -1,0 +1,264 @@
+{
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "ai_evidence_hits": {
+        "type": "keyword"
+      },
+      "ai_evidence_level": {
+        "type": "keyword"
+      },
+      "also_on": {
+        "type": "keyword"
+      },
+      "apply_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "batch": {
+        "type": "keyword"
+      },
+      "benefits": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "city": {
+        "type": "keyword"
+      },
+      "collected_at": {
+        "type": "date",
+        "format": "yyyy-MM-dd||yyyy-MM-dd HH:mm:ss||strict_date_optional_time",
+        "ignore_malformed": true
+      },
+      "company": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 512
+          }
+        },
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "company_display": {
+        "type": "keyword"
+      },
+      "company_featured": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "company_id": {
+        "type": "keyword"
+      },
+      "company_key": {
+        "type": "keyword"
+      },
+      "company_match": {
+        "type": "keyword"
+      },
+      "company_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "direction": {
+        "type": "keyword"
+      },
+      "direction_confidence": {
+        "type": "float",
+        "ignore_malformed": true
+      },
+      "direction_label": {
+        "type": "keyword"
+      },
+      "district": {
+        "type": "keyword"
+      },
+      "education": {
+        "type": "keyword"
+      },
+      "education_raw": {
+        "type": "keyword"
+      },
+      "experience": {
+        "type": "keyword"
+      },
+      "experience_raw": {
+        "type": "keyword"
+      },
+      "geo": {
+        "properties": {
+          "lat": {
+            "type": "double",
+            "ignore_malformed": true
+          },
+          "lon": {
+            "type": "double",
+            "ignore_malformed": true
+          }
+        }
+      },
+      "industry": {
+        "type": "keyword"
+      },
+      "is_ai_relevant": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "is_remote": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "jd": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "job_id": {
+        "type": "keyword"
+      },
+      "job_link": {
+        "type": "keyword",
+        "index": false
+      },
+      "job_type": {
+        "type": "keyword"
+      },
+      "location": {
+        "type": "keyword"
+      },
+      "provenance": {
+        "type": "keyword"
+      },
+      "published_at": {
+        "type": "date",
+        "format": "yyyy-MM-dd||yyyy-MM-dd HH:mm:ss||strict_date_optional_time",
+        "ignore_malformed": true
+      },
+      "published_at_raw": {
+        "type": "keyword"
+      },
+      "published_days_ago": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "requirements": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "responsibilities": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "salary": {
+        "type": "keyword"
+      },
+      "salary_anomaly": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "salary_basis": {
+        "type": "keyword"
+      },
+      "salary_basis_rank": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_estimated": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "salary_max": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_min": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_monthly_avg": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_monthly_max": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_monthly_min": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_months": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_note": {
+        "type": "keyword"
+      },
+      "salary_period": {
+        "type": "keyword"
+      },
+      "salary_rank": {
+        "type": "integer",
+        "ignore_malformed": true
+      },
+      "salary_unit_guessed_k": {
+        "type": "boolean",
+        "ignore_malformed": true
+      },
+      "skill_source": {
+        "type": "keyword"
+      },
+      "skills": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        },
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "source_job_id": {
+        "type": "keyword"
+      },
+      "source_keyword": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "summary": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 512
+          }
+        },
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "updated_at": {
+        "type": "date",
+        "format": "yyyy-MM-dd||yyyy-MM-dd HH:mm:ss||strict_date_optional_time",
+        "ignore_malformed": true
+      },
+      "welfare": {
+        "type": "keyword"
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "abstract": {
+        "type": "text",
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "authors": {
+        "properties": {
+          "affiliation": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          }
+        }
+      },
+      "categories": {
+        "type": "keyword"
+      },
+      "created_date": {
+        "type": "date"
+      },
+      "data_source": {
+        "type": "keyword"
+      },
+      "description": {
+        "type": "text",
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "external_ids": {
+        "type": "object",
+        "enabled": false
+      },
+      "extra": {
+        "properties": {
+          "ai_keywords": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "ai_methods": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 128
+              }
+            },
+            "copy_to": [
+              "search_all"
+            ],
+            "analyzer": "ik_max_word",
+            "search_analyzer": "ik_smart"
+          },
+          "ai_subfield": {
+            "type": "keyword"
+          },
+          "base_model": {
+            "type": "keyword"
+          },
+          "config": {
+            "type": "object",
+            "enabled": false
+          },
+          "created_at": {
+            "type": "date"
+          },
+          "downloads": {
+            "type": "long"
+          },
+          "framework": {
+            "type": "keyword"
+          },
+          "has_model_card": {
+            "type": "boolean"
+          },
+          "is_ai_related": {
+            "type": "boolean"
+          },
+          "is_fine_tuned": {
+            "type": "boolean"
+          },
+          "is_merged": {
+            "type": "boolean"
+          },
+          "is_open_access": {
+            "type": "boolean"
+          },
+          "library_name": {
+            "type": "keyword"
+          },
+          "likes": {
+            "type": "integer"
+          },
+          "model_card": {
+            "type": "text",
+            "index": false
+          },
+          "model_index": {
+            "type": "object",
+            "enabled": false
+          },
+          "model_size_mb": {
+            "type": "double"
+          },
+          "parameter_count": {
+            "type": "long"
+          },
+          "pipeline_tag": {
+            "type": "keyword"
+          },
+          "task_type": {
+            "type": "keyword"
+          }
+        }
+      },
+      "html_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "language": {
+        "type": "keyword"
+      },
+      "license": {
+        "type": "keyword"
+      },
+      "pdf_url": {
+        "type": "keyword",
+        "index": false
+      },
+      "published_date": {
+        "type": "date"
+      },
+      "search_all": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "source": {
+        "type": "keyword"
+      },
+      "source_id": {
+        "type": "keyword"
+      },
+      "tags": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        },
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 512
+          }
+        },
+        "copy_to": [
+          "search_all"
+        ],
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "updated_date": {
+        "type": "date"
+      },
+      "url": {
+        "type": "keyword",
+        "index": false
+      }
+    }
+  }
+}

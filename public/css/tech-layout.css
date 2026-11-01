@@ -1,0 +1,3 @@
+/* 应用栏优先保持为一行：参考成熟科技产品的稳定导航密度。 */
+@media (min-width:701px) and (max-width:1050px){.topbar{height:64px}.top-inner{height:64px;min-height:0;flex-wrap:nowrap;padding:0 20px;gap:12px}.brand{margin-right:0;flex:none}.main-nav{order:0;flex:1 1 auto;flex-basis:auto;justify-content:center;overflow:hidden}.main-nav a{padding:6px 7px;font-size:12px}.head-search{order:0;display:flex;flex:0 1 258px;min-width:170px;margin-left:0}.fav-button{order:0;flex:none}.layout main{padding-top:64px}.head-status{display:none}}
+@media(max-width:700px){.topbar{height:auto}.top-inner{min-height:64px}.head-status{display:none}}
