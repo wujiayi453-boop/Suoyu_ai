@@ -5,7 +5,7 @@
 ### 第一次使用（只做一次）
 
 1. 安装 [Node.js](https://nodejs.org/)：选择 **LTS** 版本，安装时保持默认选项。已经安装 18 或更高版本可跳过。
-2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。本仓库为私有仓库，登录账号需要有访问权限。
+2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。本仓库已公开，任何人都可以查看和下载。
 3. 在本仓库网页点击绿色 **Code → Open with GitHub Desktop**，选择保存位置，再点 **Clone**。也可在 Desktop 中点 **File → Clone repository → URL**，填写 `https://github.com/wujiayi453-boop/Suoyu_ai`。
 4. 等待下载结束。完整数据约 **1.3 GB**，请预留至少 **4 GB** 磁盘空间。
 5. 在 Desktop 中点 **Repository → Show in Explorer**，找到并双击 **启动.bat**（隐藏扩展名时显示为“启动”）。
@@ -26,7 +26,7 @@
 | --- | --- |
 | 打开了 Node.js 官网 | 安装 LTS 版本，安装结束后重新双击启动 |
 | 提示数据未下载完整 | 保持联网；启动器会尝试下载。若提示找不到 Git，请安装 Git for Windows（含 Git LFS），再重试 |
-| 提示没有权限或找不到仓库 | 确认 GitHub Desktop 登录的是获授权账号；联系仓库所有者添加访问权限 |
+| 提示没有权限或找不到仓库 | 本仓库已公开；检查网址和网络连接，必要时重新登录 GitHub Desktop |
 | 网页没有自动弹出 | 复制启动窗口里显示的网址到浏览器，端口每次可能不同 |
 | 下载的是 ZIP，提示数据缺失 | 改用上面的 GitHub Desktop 下载方式；源码 ZIP 可能只有大文件占位符 |
 | 关闭窗口后网页无法访问 | 再次双击启动；这是本地运行的网站 |
@@ -94,4 +94,5 @@ logs/       运行与验证日志
 - `.env` 不入库（已在 `.gitignore`），不要把 API Key 写进前端文件。
 - `database/raw/` 约 1.3 GB，请勿移动或改名。
 - 前端新增 CSS/JS 必须放进 `public/css/`、`public/js/`，并在 `public/index.html` 里用 `css/…`、`js/…` 前缀引用。
+
 
