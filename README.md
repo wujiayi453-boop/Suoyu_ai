@@ -5,7 +5,7 @@
 ### 第一次使用（只做一次）
 
 1. 安装 [Node.js](https://nodejs.org/)：选择 **LTS** 版本，安装时保持默认选项。已经安装 18 或更高版本可跳过。
-2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。本仓库已公开，任何人都可以查看和下载。
+2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。下载。
 3. 在本仓库网页点击绿色 **Code → Open with GitHub Desktop**，选择保存位置，再点 **Clone**。也可在 Desktop 中点 **File → Clone repository → URL**，填写 `https://github.com/wujiayi453-boop/Suoyu_ai`。
 4. 等待下载结束。完整数据约 **1.3 GB**，请预留至少 **4 GB** 磁盘空间。
 5. 在 Desktop 中点 **Repository → Show in Explorer**，找到并双击 **启动.bat**（隐藏扩展名时显示为“启动”）。
