@@ -2,9 +2,19 @@
 
 找机会，读新知。岗位、公司、论文、模型与资讯，在这里一起探索。
 
-## 已经有完整项目？直接打开，不用重新下载
 
-只需要安装 [Node.js LTS](https://nodejs.org/)（最低版本 18）。**不需要 GitHub Desktop，不需要安装数据库，也无需 npm install。**
+## 🖥️ 界面预览
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/38881427-2db9-4e35-b782-637accb74359" alt="索yu 界面展示 1" width="49%" />
+  <img src="https://github.com/user-attachments/assets/c805cdc8-12f1-4441-aaa2-4bc58234e613" alt="索yu 界面展示 2" width="49%" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ed515fc4-b644-472e-823e-9edb21b39264" alt="索yu 界面展示 3" width="49%" />
+  <img src="https://github.com/user-attachments/assets/cd18a50e-f37e-451b-8915-806fc1900c42" alt="索yu 界面展示 4" width="49%" />
+</p>
+## 已经有完整项目？直接打开，不用重新下载
 
 | 打开方式 | 怎么操作 | 怎么停止 |
 | --- | --- | --- |
@@ -16,9 +26,7 @@
 
 前四种方式会检查完整数据、自动选择空闲端口；Windows 上会自动打开浏览器，其他系统请打开终端显示的网址。固定端口方式适合已确认数据齐全的使用者。
 
-VS Code 如果询问是否信任文件夹，请在确认来源可信后选择信任。不需要 Live Server；不要直接打开 public/index.html，否则搜索和详情接口无法正常工作。
-
-## 首次下载（无需 GitHub Desktop）
+## 首次下载
 
 已有完整文件夹的用户跳过本节。首次获取完整项目需要 [Git](https://git-scm.com/downloads) 和 [Git LFS](https://git-lfs.com/)。Git for Windows 通常包含 Git LFS。
 
@@ -55,21 +63,6 @@ npm run open
 ---
 ## 开发与维护
 
-以下内容面向需要修改代码的人；普通使用者无需操作。
-# AI 数据搜索台（离线完整包）
-
-岗位 / 公司 / 论文 / 模型 / 资讯五类内容的本地检索台。零第三方依赖，只用 Node 内置模块。
-
-## 启动
-
-```bash
-npm start          # 等价于 node src/server.js
-```
-
-或者直接双击 `启动.bat`（检查数据后使用空闲端口并自动打开浏览器）。
-
-端口可用环境变量覆盖：`PORT=5000 npm start`。
-
 ## 目录结构
 
 ```
@@ -105,11 +98,7 @@ logs/       运行与验证日志
 - [docs/PRODUCT.md](docs/PRODUCT.md)：产品定义
 - [docs/打开与配置说明.md](docs/打开与配置说明.md)：面向使用者的打开与配置指南
 
-## 注意
 
-- `.env` 不入库（已在 `.gitignore`），不要把 API Key 写进前端文件。
-- `database/raw/` 约 1.3 GB，请勿移动或改名。
-- 前端新增 CSS/JS 必须放进 `public/css/`、`public/js/`，并在 `public/index.html` 里用 `css/…`、`js/…` 前缀引用。
 
 
 
