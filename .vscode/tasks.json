@@ -1,0 +1,21 @@
+{
+  "tasks": [
+    {
+      "label": "索yu：启动网站",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": [],
+      "args": [
+        "scripts/start-easy.js"
+      ],
+      "command": "node",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "type": "process"
+    }
+  ],
+  "version": "2.0.0"
+}

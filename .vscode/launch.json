@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "cwd": "${workspaceFolder}",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/scripts/start-easy.js",
+      "console": "integratedTerminal",
+      "name": "索yu：一键启动",
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}

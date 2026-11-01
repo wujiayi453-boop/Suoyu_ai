@@ -20,7 +20,7 @@ function ready(file) {
 }
 console.log('索yu · 正在检查启动环境…');
 if (!files.every(ready)) {
-  if (!fs.existsSync(path.join(root, '.git'))) fail('数据尚未下载完整。请使用 GitHub Desktop 克隆仓库，再双击启动.bat。具体步骤见 README.md；请勿只下载源码 ZIP。');
+  if (!fs.existsSync(path.join(root, '.git'))) fail('数据尚未下载完整。请按照 README 使用 Git 和 Git LFS 克隆完整仓库，再双击启动或在 VS Code 中按 F5。具体步骤见 README.md；请勿只下载源码 ZIP。');
   console.log('首次使用需要下载约 1.3 GB 数据，请保持联网并等待。可能需要登录 GitHub。');
   const result = spawnSync('git', ['lfs', 'pull'], { cwd: root, stdio: 'inherit', windowsHide: true });
   if (result.error || result.status !== 0 || !files.every(ready)) fail('数据下载未完成。请确认 Git 和 Git LFS 已安装、GitHub 账号有仓库访问权限，然后重新双击启动。已下载的数据会保留。');
@@ -35,3 +35,4 @@ server.listen(0, '127.0.0.1', () => {
   console.log(`\n索yu已启动：${url}\n请保持此窗口打开。关闭此窗口即可停止网站。\n网页未自动打开时，可复制上面的地址到浏览器。`);
   if (process.platform === 'win32') execFile('explorer.exe', [url], () => {});
 });
+

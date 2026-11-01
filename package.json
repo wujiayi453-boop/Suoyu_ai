@@ -12,7 +12,8 @@
     "audit:relations": "node scripts/audit-relations.js",
     "audit:content": "node scripts/audit-content.js",
     "verify:product": "node scripts/verify-product.js",
-    "mock:es": "node scripts/mock-elasticsearch.js"
+    "mock:es": "node scripts/mock-elasticsearch.js",
+    "open": "node scripts/start-easy.js"
   },
   "engines": {
     "node": ">=18"

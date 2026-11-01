@@ -2,41 +2,57 @@
 
 找机会，读新知。岗位、公司、论文、模型与资讯，在这里一起探索。
 
-### 第一次使用（只做一次）
+## 已经有完整项目？直接打开，不用重新下载
 
-1. 安装 [Node.js](https://nodejs.org/)：选择 **LTS** 版本，安装时保持默认选项。已经安装 18 或更高版本可跳过。
-2. 安装并登录 [GitHub Desktop](https://desktop.github.com/)。下载。
-3. 在本仓库网页点击绿色 **Code → Open with GitHub Desktop**，选择保存位置，再点 **Clone**。也可在 Desktop 中点 **File → Clone repository → URL**，填写 `https://github.com/wujiayi453-boop/Suoyu_ai`。
-4. 等待下载结束。完整数据约 **1.3 GB**，请预留至少 **4 GB** 磁盘空间。
-5. 在 Desktop 中点 **Repository → Show in Explorer**，找到并双击 **启动.bat**（隐藏扩展名时显示为“启动”）。
+只需要安装 [Node.js LTS](https://nodejs.org/)（最低版本 18）。**不需要 GitHub Desktop，不需要安装数据库，也无需 npm install。**
 
-网页会在服务准备好后自动打开。**请保留启动窗口；关闭窗口即可停止网站。** 不要双击 public/index.html，也不要移动 database 文件夹。
+| 打开方式 | 怎么操作 | 怎么停止 |
+| --- | --- | --- |
+| 双击启动（Windows） | 在项目文件夹双击 `启动.bat`，浏览器自动打开 | 关闭启动窗口 |
+| VS Code 一键运行 | 文件 → 打开文件夹，选择包含 package.json 的项目根目录；按 F5，选择“索yu：一键启动” | 按 Shift+F5 |
+| VS Code 任务 | 终端 → 运行任务 → 索yu：启动网站 | 终止该任务 |
+| 终端启动 | 在项目根目录运行 `npm run open` | 按 Ctrl+C |
+| 固定端口启动 | 运行 `npm start`，浏览器打开 http://127.0.0.1:4173/ | 按 Ctrl+C |
 
-### 以后怎么打开？
+前四种方式会检查完整数据、自动选择空闲端口；Windows 上会自动打开浏览器，其他系统请打开终端显示的网址。固定端口方式适合已确认数据齐全的使用者。
 
-直接双击文件夹里的 **启动.bat** 即可，不用每次打开 GitHub Desktop。可以右键启动文件，创建快捷方式放在桌面；不要把启动文件本身移出去。
+VS Code 如果询问是否信任文件夹，请在确认来源可信后选择信任。不需要 Live Server；不要直接打开 public/index.html，否则搜索和详情接口无法正常工作。
 
-### 怎么更新？
+## 首次下载（无需 GitHub Desktop）
 
-先关闭启动窗口。在 GitHub Desktop 中选择此仓库，点 **Fetch origin**，有更新时再点 **Pull origin**。下载完成后重新双击启动。
+已有完整文件夹的用户跳过本节。首次获取完整项目需要 [Git](https://git-scm.com/downloads) 和 [Git LFS](https://git-lfs.com/)。Git for Windows 通常包含 Git LFS。
 
-### 打不开时
+在 VS Code 的“终端 → 新建终端”中依次运行：
 
-| 看到的情况 | 怎么处理 |
-| --- | --- |
-| 打开了 Node.js 官网 | 安装 LTS 版本，安装结束后重新双击启动 |
-| 提示数据未下载完整 | 保持联网；启动器会尝试下载。若提示找不到 Git，请安装 Git for Windows（含 Git LFS），再重试 |
-| 提示没有权限或找不到仓库 | 本仓库已公开；检查网址和网络连接，必要时重新登录 GitHub Desktop |
-| 网页没有自动弹出 | 复制启动窗口里显示的网址到浏览器，端口每次可能不同 |
-| 下载的是 ZIP，提示数据缺失 | 改用上面的 GitHub Desktop 下载方式；源码 ZIP 可能只有大文件占位符 |
-| 关闭窗口后网页无法访问 | 再次双击启动；这是本地运行的网站 |
+```bash
+git lfs install
+git clone --depth 1 https://github.com/wujiayi453-boop/Suoyu_ai.git
+cd Suoyu_ai
+git lfs pull
+npm run open
+```
 
-启动器不会自动安装软件或修改系统设置。数据齐全后无需联网下载即可启动；外部图片和来源链接仍需要网络。
+`--depth 1` 只获取最新版本，避免下载旧提交历史。完整原始数据约 1.3 GB，本地完整运行仍需保存这些数据；Git/LFS 还会保留缓存，请预留至少 4 GB 空间。首次下载完成后，平时启动不会重复下载已有完整数据。
 
-[GitHub Desktop 官方下载说明](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+也可以使用 VS Code 的“Git: Clone”命令克隆仓库，再打开下载好的文件夹；这种方式同样需要 Git 和 Git LFS，并可能获取更多历史。
+
+不推荐只用 **Download ZIP**：源码压缩包可能只有 LFS 占位符，无法保证完整正文。启动器会识别此情况并提示，不会把占位数据当成完整数据运行。
+
+## 更新项目
+
+关闭正在运行的网站。在项目根目录的终端依次运行 `git pull --ff-only` 和 `git lfs pull`，然后重新启动。有自己修改的代码时，先保存或提交更改；遇到冲突不要直接覆盖文件。
+
+## 常见问题
+
+- **没有 Node.js**：双击启动会打开官网；安装 LTS 后重新启动。
+- **数据未下载完整**：在克隆的项目里，启动器会尝试执行 Git LFS 下载；失败时检查 Git/LFS 和网络，再重试。
+- **网页没有自动打开**：复制终端显示的网址。自动启动使用空闲端口，每次可能不同。
+- **固定端口被占用**：使用 `npm run open` 或 F5 启动。
+- **关闭终端后打不开网页**：重新启动网站，运行期间保留启动窗口。
+
+内容、搜索和关联功能使用完整本地数据。外部封面图片和来源链接仍需要网络。启动器不会自动安装软件或修改系统设置。
 
 ---
-
 ## 开发与维护
 
 以下内容面向需要修改代码的人；普通使用者无需操作。
@@ -50,7 +66,7 @@
 npm start          # 等价于 node src/server.js
 ```
 
-或者直接双击 `启动.bat`（会自动打开 http://127.0.0.1:4173 ）。
+或者直接双击 `启动.bat`（检查数据后使用空闲端口并自动打开浏览器）。
 
 端口可用环境变量覆盖：`PORT=5000 npm start`。
 
@@ -94,5 +110,6 @@ logs/       运行与验证日志
 - `.env` 不入库（已在 `.gitignore`），不要把 API Key 写进前端文件。
 - `database/raw/` 约 1.3 GB，请勿移动或改名。
 - 前端新增 CSS/JS 必须放进 `public/css/`、`public/js/`，并在 `public/index.html` 里用 `css/…`、`js/…` 前缀引用。
+
 
 
